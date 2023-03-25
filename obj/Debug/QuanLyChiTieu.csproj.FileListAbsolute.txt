@@ -1,0 +1,11 @@
+D:\OU university\ltgd\QuanLyChiTieu\bin\Debug\QuanLyChiTieu.exe.config
+D:\OU university\ltgd\QuanLyChiTieu\bin\Debug\QuanLyChiTieu.exe
+D:\OU university\ltgd\QuanLyChiTieu\bin\Debug\QuanLyChiTieu.pdb
+D:\OU university\ltgd\QuanLyChiTieu\obj\Debug\QuanLyChiTieu.csproj.AssemblyReference.cache
+D:\OU university\ltgd\QuanLyChiTieu\obj\Debug\QuanLyChiTieu.FrmLogin.resources
+D:\OU university\ltgd\QuanLyChiTieu\obj\Debug\QuanLyChiTieu.FrmMain.resources
+D:\OU university\ltgd\QuanLyChiTieu\obj\Debug\QuanLyChiTieu.Properties.Resources.resources
+D:\OU university\ltgd\QuanLyChiTieu\obj\Debug\QuanLyChiTieu.csproj.GenerateResource.cache
+D:\OU university\ltgd\QuanLyChiTieu\obj\Debug\QuanLyChiTieu.csproj.CoreCompileInputs.cache
+D:\OU university\ltgd\QuanLyChiTieu\obj\Debug\QuanLyChiTieu.exe
+D:\OU university\ltgd\QuanLyChiTieu\obj\Debug\QuanLyChiTieu.pdb
