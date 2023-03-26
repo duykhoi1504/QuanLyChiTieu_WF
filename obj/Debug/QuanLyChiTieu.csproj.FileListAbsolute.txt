@@ -9,3 +9,6 @@ D:\OU university\ltgd\QuanLyChiTieu\obj\Debug\QuanLyChiTieu.csproj.GenerateResou
 D:\OU university\ltgd\QuanLyChiTieu\obj\Debug\QuanLyChiTieu.csproj.CoreCompileInputs.cache
 D:\OU university\ltgd\QuanLyChiTieu\obj\Debug\QuanLyChiTieu.exe
 D:\OU university\ltgd\QuanLyChiTieu\obj\Debug\QuanLyChiTieu.pdb
+D:\OU university\ltgd\QuanLyChiTieu\obj\Debug\QuanLyChiTieu.UserControlBlank.resources
+D:\OU university\ltgd\QuanLyChiTieu\obj\Debug\QuanLyChiTieu.FrmLich.resources
+D:\OU university\ltgd\QuanLyChiTieu\obj\Debug\QuanLyChiTieu.UserControlDays.resources

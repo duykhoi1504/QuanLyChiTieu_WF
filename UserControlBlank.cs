@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace QuanLyChiTieu
 {
-    
-    public partial class FrmMain : Form
+    public partial class UserControlBlank : UserControl
     {
-        public static string DangNhap = "";
-        public FrmMain()
+        public UserControlBlank()
         {
-            FrmLogin f = new FrmLogin();
-            f.ShowDialog();
             InitializeComponent();
         }
-
-      
     }
 }

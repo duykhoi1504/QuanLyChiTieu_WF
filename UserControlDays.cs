@@ -10,17 +10,20 @@ using System.Windows.Forms;
 
 namespace QuanLyChiTieu
 {
-    
-    public partial class FrmMain : Form
+    public partial class UserControlDays : UserControl
     {
-        public static string DangNhap = "";
-        public FrmMain()
+        public UserControlDays()
         {
-            FrmLogin f = new FrmLogin();
-            f.ShowDialog();
             InitializeComponent();
         }
 
-      
+        private void UserControlDays_Load(object sender, EventArgs e)
+        {
+               
+        }
+        public void days( int numday)
+        {
+            lbdays.Text = numday + "";
+        }
     }
 }
