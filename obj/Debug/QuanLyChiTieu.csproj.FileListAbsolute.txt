@@ -12,3 +12,4 @@ D:\OU university\ltgd\QuanLyChiTieu\obj\Debug\QuanLyChiTieu.pdb
 D:\OU university\ltgd\QuanLyChiTieu\obj\Debug\QuanLyChiTieu.UserControlBlank.resources
 D:\OU university\ltgd\QuanLyChiTieu\obj\Debug\QuanLyChiTieu.FrmLich.resources
 D:\OU university\ltgd\QuanLyChiTieu\obj\Debug\QuanLyChiTieu.UserControlDays.resources
+D:\OU university\ltgd\QuanLyChiTieu\obj\Debug\QuanLyChiTieu.FrmBaoCao.resources

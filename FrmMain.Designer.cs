@@ -44,6 +44,7 @@ namespace QuanLyChiTieu
             this.listView1 = new System.Windows.Forms.ListView();
             this.DanhMuc = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SoTien = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.DateThuChi = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.GhiChu = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -87,7 +88,6 @@ namespace QuanLyChiTieu
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.DateThuChi = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel11.SuspendLayout();
@@ -248,6 +248,11 @@ namespace QuanLyChiTieu
             // 
             this.SoTien.Text = "Số tiền";
             this.SoTien.Width = 100;
+            // 
+            // DateThuChi
+            // 
+            this.DateThuChi.Text = "Date";
+            this.DateThuChi.Width = 90;
             // 
             // GhiChu
             // 
@@ -586,7 +591,7 @@ namespace QuanLyChiTieu
             this.button2.BackColor = System.Drawing.SystemColors.ControlDark;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.button2.Location = new System.Drawing.Point(244, 12);
+            this.button2.Location = new System.Drawing.Point(244, 4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(225, 39);
             this.button2.TabIndex = 3;
@@ -598,7 +603,7 @@ namespace QuanLyChiTieu
             this.button1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.button1.Location = new System.Drawing.Point(470, 12);
+            this.button1.Location = new System.Drawing.Point(475, 4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(225, 39);
             this.button1.TabIndex = 3;
@@ -714,11 +719,6 @@ namespace QuanLyChiTieu
             this.label6.TabIndex = 0;
             this.label6.Text = "Chi tiêu:";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // DateThuChi
-            // 
-            this.DateThuChi.Text = "Date";
-            this.DateThuChi.Width = 90;
             // 
             // FrmMain
             // 
