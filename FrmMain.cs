@@ -47,10 +47,11 @@ namespace QuanLyChiTieu
             btLich.BackColor = Color.White;
             btNhap.BackColor = Color.Orange;
 
-            OpenCHildForm(new FormNhap());
+            OpenCHildForm(new FrmNhap());
             pnBody.Size = new Size(633, 595);
             this.Size = new Size(600, 545);
-           
+            this.StartPosition = FormStartPosition.CenterScreen;
+
         }
 
         private void btLich_Click(object sender, EventArgs e)
@@ -61,6 +62,7 @@ namespace QuanLyChiTieu
             OpenCHildForm(new FrmLich());
             pnBody.Size = new Size(988, 805);
             this.Size = new Size(875,675);
+            this.StartPosition = FormStartPosition.CenterScreen;
 
         }
 
@@ -73,6 +75,8 @@ namespace QuanLyChiTieu
 
             pnBody.Size = new Size(665, 628);
             this.Size = new Size(650, 545);
+            this.StartPosition = FormStartPosition.CenterScreen;
+
 
         }
 

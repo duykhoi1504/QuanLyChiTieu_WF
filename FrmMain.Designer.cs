@@ -38,9 +38,15 @@ namespace QuanLyChiTieu
             this.pnBody = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.lbIcon = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.HomePicture)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.pnBody.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // HomePicture
@@ -108,6 +114,8 @@ namespace QuanLyChiTieu
             // 
             // pnBody
             // 
+            this.pnBody.Controls.Add(this.panel2);
+            this.pnBody.Controls.Add(this.panel1);
             this.pnBody.Controls.Add(this.label1);
             this.pnBody.Controls.Add(this.lbIcon);
             this.pnBody.Location = new System.Drawing.Point(152, 12);
@@ -136,6 +144,42 @@ namespace QuanLyChiTieu
             this.lbIcon.TabIndex = 0;
             this.lbIcon.Text = "o(≧▽≦)o";
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.checkBox3);
+            this.panel1.Location = new System.Drawing.Point(145, 46);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(200, 100);
+            this.panel1.TabIndex = 8;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.checkBox1);
+            this.panel2.Location = new System.Drawing.Point(364, 46);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(200, 100);
+            this.panel2.TabIndex = 9;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(35, 40);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(98, 21);
+            this.checkBox1.TabIndex = 4;
+            this.checkBox1.Text = "checkBox1";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // checkBox3
+            // 
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Location = new System.Drawing.Point(35, 40);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(98, 21);
+            this.checkBox3.TabIndex = 4;
+            this.checkBox3.Text = "checkBox3";
+            this.checkBox3.UseVisualStyleBackColor = true;
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -152,6 +196,10 @@ namespace QuanLyChiTieu
             this.groupBox3.ResumeLayout(false);
             this.pnBody.ResumeLayout(false);
             this.pnBody.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -165,6 +213,10 @@ namespace QuanLyChiTieu
         private System.Windows.Forms.Panel pnBody;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lbIcon;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox checkBox3;
     }
 }
 
