@@ -30,25 +30,29 @@ namespace QuanLyChiTieu
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.HomePicture = new System.Windows.Forms.PictureBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btBaocao = new System.Windows.Forms.Button();
             this.btNhap = new System.Windows.Forms.Button();
             this.btLich = new System.Windows.Forms.Button();
             this.pnBody = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lbIcon = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.HomePicture)).BeginInit();
             this.groupBox3.SuspendLayout();
+            this.pnBody.SuspendLayout();
             this.SuspendLayout();
             // 
-            // pictureBox10
+            // HomePicture
             // 
-            this.pictureBox10.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox10.BackgroundImage")));
-            this.pictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox10.Location = new System.Drawing.Point(12, 12);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(134, 127);
-            this.pictureBox10.TabIndex = 13;
-            this.pictureBox10.TabStop = false;
+            this.HomePicture.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("HomePicture.BackgroundImage")));
+            this.HomePicture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.HomePicture.Location = new System.Drawing.Point(12, 12);
+            this.HomePicture.Name = "HomePicture";
+            this.HomePicture.Size = new System.Drawing.Size(134, 127);
+            this.HomePicture.TabIndex = 13;
+            this.HomePicture.TabStop = false;
+            this.HomePicture.Click += new System.EventHandler(this.HomePicture_Click);
             // 
             // groupBox3
             // 
@@ -104,10 +108,33 @@ namespace QuanLyChiTieu
             // 
             // pnBody
             // 
+            this.pnBody.Controls.Add(this.label1);
+            this.pnBody.Controls.Add(this.lbIcon);
             this.pnBody.Location = new System.Drawing.Point(152, 12);
             this.pnBody.Name = "pnBody";
             this.pnBody.Size = new System.Drawing.Size(633, 595);
             this.pnBody.TabIndex = 25;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(154, 265);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(281, 20);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Vui lòng chọn chức năng trong Menu";
+            // 
+            // lbIcon
+            // 
+            this.lbIcon.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbIcon.AutoSize = true;
+            this.lbIcon.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbIcon.Location = new System.Drawing.Point(118, 169);
+            this.lbIcon.Name = "lbIcon";
+            this.lbIcon.Size = new System.Drawing.Size(338, 91);
+            this.lbIcon.TabIndex = 0;
+            this.lbIcon.Text = "o(≧▽≦)o";
             // 
             // FrmMain
             // 
@@ -117,23 +144,27 @@ namespace QuanLyChiTieu
             this.ClientSize = new System.Drawing.Size(794, 625);
             this.Controls.Add(this.pnBody);
             this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.pictureBox10);
+            this.Controls.Add(this.HomePicture);
             this.Name = "FrmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quan Ly Chi Tieu";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HomePicture)).EndInit();
             this.groupBox3.ResumeLayout(false);
+            this.pnBody.ResumeLayout(false);
+            this.pnBody.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.PictureBox pictureBox10;
+        private System.Windows.Forms.PictureBox HomePicture;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button btBaocao;
         private System.Windows.Forms.Button btNhap;
         private System.Windows.Forms.Button btLich;
         private System.Windows.Forms.Panel pnBody;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbIcon;
     }
 }
 

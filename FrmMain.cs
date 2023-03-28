@@ -15,8 +15,7 @@ namespace QuanLyChiTieu
     {
         public static string DangNhap = "";
 
-        Size Nhap = new Size(812, 663);
-        Size Lich = new Size(812, 663);
+       
 
 
         public FrmMain()
@@ -76,5 +75,15 @@ namespace QuanLyChiTieu
             this.Size = new Size(650, 545);
 
         }
+
+        private void HomePicture_Click(object sender, EventArgs e)
+        {
+            if (currenFormChild != null)
+            {
+                currenFormChild.Close();
+            }
+        }
+
+        
     }
 }
