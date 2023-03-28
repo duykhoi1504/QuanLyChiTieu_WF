@@ -12,32 +12,32 @@ namespace QuanLyChiTieu
 {
     public partial class UserControlMenu : UserControl
     {
-        List<object> objectPool = new List<object>();
+      
         public UserControlMenu()
         {
             InitializeComponent();
         }
 
-        private void btNhap_Click(object sender, EventArgs e)
-        {
-            FrmMain M = new FrmMain();
+        //private void btNhap_Click(object sender, EventArgs e)
+        //{
+        //    FrmMain M = new FrmMain();
            
-            M.ShowDialog();
-        }
+        //    M.ShowDialog();
+        //}
 
-        private void btLich_Click(object sender, EventArgs e)
-        {
+        //private void btLich_Click(object sender, EventArgs e)
+        //{
            
-            FrmLich L = new FrmLich();
+        //    FrmLich L = new FrmLich();
             
 
-            L.ShowDialog();
-        }
+        //    L.ShowDialog();
+        //}
 
-        private void btBaocao_Click(object sender, EventArgs e)
-        {
-            FrmBaoCao B = new FrmBaoCao();
-            B.ShowDialog();
-        }
+        //private void btBaocao_Click(object sender, EventArgs e)
+        //{
+        //    FrmBaoCao B = new FrmBaoCao();
+        //    B.ShowDialog();
+        //}
     }
 }

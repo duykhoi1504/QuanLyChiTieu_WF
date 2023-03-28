@@ -47,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNhap.Designer.cs">
+      <DependentUpon>FormNhap.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmBaoCao.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +110,9 @@
     <Compile Include="UserControlThu.Designer.cs">
       <DependentUpon>UserControlThu.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FormNhap.resx">
+      <DependentUpon>FormNhap.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmBaoCao.resx">
       <DependentUpon>FrmBaoCao.cs</DependentUpon>
     </EmbeddedResource>

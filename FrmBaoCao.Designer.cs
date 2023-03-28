@@ -29,11 +29,9 @@ namespace QuanLyChiTieu
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmBaoCao));
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -55,23 +53,11 @@ namespace QuanLyChiTieu
             this.button7 = new System.Windows.Forms.Button();
             this.containerThuchi = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.containerMenu = new System.Windows.Forms.FlowLayoutPanel();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.containerThuchi.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // pictureBox10
-            // 
-            this.pictureBox10.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox10.BackgroundImage")));
-            this.pictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox10.Location = new System.Drawing.Point(12, 12);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(134, 127);
-            this.pictureBox10.TabIndex = 19;
-            this.pictureBox10.TabStop = false;
             // 
             // panel1
             // 
@@ -83,7 +69,7 @@ namespace QuanLyChiTieu
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.dateTimePicker1);
-            this.panel1.Location = new System.Drawing.Point(159, 49);
+            this.panel1.Location = new System.Drawing.Point(12, 48);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(310, 140);
             this.panel1.TabIndex = 17;
@@ -169,7 +155,7 @@ namespace QuanLyChiTieu
             this.button1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.button1.Location = new System.Drawing.Point(324, 12);
+            this.button1.Location = new System.Drawing.Point(177, 11);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(145, 31);
             this.button1.TabIndex = 15;
@@ -181,12 +167,13 @@ namespace QuanLyChiTieu
             this.button2.BackColor = System.Drawing.SystemColors.ControlDark;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.button2.Location = new System.Drawing.Point(159, 12);
+            this.button2.Location = new System.Drawing.Point(12, 11);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(159, 31);
             this.button2.TabIndex = 16;
             this.button2.Text = "Hằng tháng";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // chart1
             // 
@@ -194,7 +181,7 @@ namespace QuanLyChiTieu
             this.chart1.ChartAreas.Add(chartArea2);
             legend2.Name = "Legend1";
             this.chart1.Legends.Add(legend2);
-            this.chart1.Location = new System.Drawing.Point(475, 11);
+            this.chart1.Location = new System.Drawing.Point(328, 10);
             this.chart1.Name = "chart1";
             series2.ChartArea = "ChartArea1";
             series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
@@ -277,35 +264,25 @@ namespace QuanLyChiTieu
             this.panel2.Controls.Add(this.button6);
             this.panel2.Controls.Add(this.containerThuchi);
             this.panel2.Controls.Add(this.button7);
-            this.panel2.Location = new System.Drawing.Point(159, 195);
+            this.panel2.Location = new System.Drawing.Point(12, 194);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(629, 383);
             this.panel2.TabIndex = 24;
-            // 
-            // containerMenu
-            // 
-            this.containerMenu.Location = new System.Drawing.Point(2, 144);
-            this.containerMenu.Name = "containerMenu";
-            this.containerMenu.Size = new System.Drawing.Size(151, 456);
-            this.containerMenu.TabIndex = 26;
             // 
             // FrmBaoCao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(800, 580);
-            this.Controls.Add(this.containerMenu);
+            this.ClientSize = new System.Drawing.Size(647, 581);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.chart1);
-            this.Controls.Add(this.pictureBox10);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button2);
             this.Name = "FrmBaoCao";
             this.Text = "Bao cao";
             this.Load += new System.EventHandler(this.FrmBaoCao_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
@@ -316,7 +293,6 @@ namespace QuanLyChiTieu
         }
 
         #endregion
-        private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
@@ -338,6 +314,5 @@ namespace QuanLyChiTieu
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Panel containerThuchi;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.FlowLayoutPanel containerMenu;
     }
 }

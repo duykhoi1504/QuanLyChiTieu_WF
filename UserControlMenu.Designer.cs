@@ -60,7 +60,7 @@ namespace QuanLyChiTieu
             this.btBaocao.TabIndex = 0;
             this.btBaocao.Text = "Báo Cáo";
             this.btBaocao.UseVisualStyleBackColor = false;
-            this.btBaocao.Click += new System.EventHandler(this.btBaocao_Click);
+        
             // 
             // btNhap
             // 
@@ -73,7 +73,7 @@ namespace QuanLyChiTieu
             this.btNhap.TabIndex = 0;
             this.btNhap.Text = "Nhập";
             this.btNhap.UseVisualStyleBackColor = false;
-            this.btNhap.Click += new System.EventHandler(this.btNhap_Click);
+      
             // 
             // btLich
             // 
@@ -86,7 +86,7 @@ namespace QuanLyChiTieu
             this.btLich.TabIndex = 0;
             this.btLich.Text = "Lịch";
             this.btLich.UseVisualStyleBackColor = false;
-            this.btLich.Click += new System.EventHandler(this.btLich_Click);
+          
             // 
             // UserControlMenu
             // 

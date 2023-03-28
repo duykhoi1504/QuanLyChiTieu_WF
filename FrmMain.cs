@@ -14,7 +14,10 @@ namespace QuanLyChiTieu
     public partial class FrmMain : Form
     {
         public static string DangNhap = "";
-    
+
+        Size Nhap = new Size(812, 663);
+        Size Lich = new Size(812, 663);
+
 
         public FrmMain()
         {
@@ -22,38 +25,56 @@ namespace QuanLyChiTieu
             f.ShowDialog();
             InitializeComponent();
         }
-        private void FrmMain_Load(object sender, EventArgs e)
+        private Form currenFormChild;
+        private void OpenCHildForm(Form childForm)
         {
-            UserControlMenu ucMenu = new UserControlMenu();
-            containerMenu.Controls.Add(ucMenu);
-            
-            
-
+            if (currenFormChild != null)
+            {
+                currenFormChild.Close();
+            }
+            currenFormChild = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            pnBody.Controls.Add(childForm);
+            pnBody.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
         }
         
-        private void btChi_Click(object sender, EventArgs e)
-        {
 
-            btThu.BackColor = Color.White;
-            containerDanhmuc.Controls.Clear();
-            UserControlChi ucChi = new UserControlChi();
-            containerDanhmuc.Controls.Add(ucChi);
+        private void btNhap_Click(object sender, EventArgs e)
+        {
+            btBaocao.BackColor = Color.White;
+            btLich.BackColor = Color.White;
+            btNhap.BackColor = Color.Orange;
+
+            OpenCHildForm(new FormNhap());
+            pnBody.Size = new Size(633, 595);
+            this.Size = new Size(600, 545);
            
-            btChi.BackColor = Color.Orange;
-            
         }
 
-        private void btThu_Click(object sender, EventArgs e)
+        private void btLich_Click(object sender, EventArgs e)
         {
-            btChi.BackColor = Color.White;
-          
+            btBaocao.BackColor = Color.White;
+            btLich.BackColor = Color.Orange;
+            btNhap.BackColor = Color.White;
+            OpenCHildForm(new FrmLich());
+            pnBody.Size = new Size(988, 805);
+            this.Size = new Size(875,675);
 
-            containerDanhmuc.Controls.Clear();
-            UserControlThu ucThu = new UserControlThu();
-            containerDanhmuc.Controls.Add(ucThu);
-            btThu.BackColor = Color.Orange;
         }
 
-        
+        private void btBaocao_Click(object sender, EventArgs e)
+        {
+            btBaocao.BackColor = Color.Orange;
+            btLich.BackColor = Color.White;
+            btNhap.BackColor = Color.White;
+            OpenCHildForm(new FrmBaoCao());
+
+            pnBody.Size = new Size(665, 628);
+            this.Size = new Size(650, 545);
+
+        }
     }
 }

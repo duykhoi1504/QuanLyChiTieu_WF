@@ -16,3 +16,4 @@ D:\OU university\ltgd\QuanLyChiTieu\obj\Debug\QuanLyChiTieu.FrmBaoCao.resources
 D:\OU university\ltgd\QuanLyChiTieu\obj\Debug\QuanLyChiTieu.UserControlChi.resources
 D:\OU university\ltgd\QuanLyChiTieu\obj\Debug\QuanLyChiTieu.UserControlThu.resources
 D:\OU university\ltgd\QuanLyChiTieu\obj\Debug\QuanLyChiTieu.UserControlMenu.resources
+D:\OU university\ltgd\QuanLyChiTieu\obj\Debug\QuanLyChiTieu.FormNhap.resources

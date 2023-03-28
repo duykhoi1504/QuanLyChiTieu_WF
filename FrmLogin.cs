@@ -25,7 +25,7 @@ namespace QuanLyChiTieu
         const int MAX_dem = 3; // toi da so lan nhap sai 
         private void nDangNhap()
         {
-            if (txtTaiKhoan.Text != "Jason" || txtMatKhau.Text != "nam")
+            if (txtTaiKhoan.Text != "" || txtMatKhau.Text != "")
             {
                 dem++;
 

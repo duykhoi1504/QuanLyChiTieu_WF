@@ -19,8 +19,12 @@ namespace QuanLyChiTieu
 
         private void FrmBaoCao_Load(object sender, EventArgs e)
         {
-            UserControlMenu ucMenu = new UserControlMenu();
-            containerMenu.Controls.Add(ucMenu);
+            
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
