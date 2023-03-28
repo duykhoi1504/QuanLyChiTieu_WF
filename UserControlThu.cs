@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace QuanLyChiTieu
 {
-    public partial class UserControlDays : UserControl
+    public partial class UserControlThu : UserControl
     {
-        public UserControlDays()
+        public UserControlThu()
         {
             InitializeComponent();
-        }
-
-        
-        public void days( int numday)
-        {
-            lbdays.Text = numday + "";
         }
     }
 }

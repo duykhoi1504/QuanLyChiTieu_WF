@@ -13,3 +13,6 @@ D:\OU university\ltgd\QuanLyChiTieu\obj\Debug\QuanLyChiTieu.UserControlBlank.res
 D:\OU university\ltgd\QuanLyChiTieu\obj\Debug\QuanLyChiTieu.FrmLich.resources
 D:\OU university\ltgd\QuanLyChiTieu\obj\Debug\QuanLyChiTieu.UserControlDays.resources
 D:\OU university\ltgd\QuanLyChiTieu\obj\Debug\QuanLyChiTieu.FrmBaoCao.resources
+D:\OU university\ltgd\QuanLyChiTieu\obj\Debug\QuanLyChiTieu.UserControlChi.resources
+D:\OU university\ltgd\QuanLyChiTieu\obj\Debug\QuanLyChiTieu.UserControlThu.resources
+D:\OU university\ltgd\QuanLyChiTieu\obj\Debug\QuanLyChiTieu.UserControlMenu.resources

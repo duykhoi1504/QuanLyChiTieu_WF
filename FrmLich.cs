@@ -20,6 +20,8 @@ namespace QuanLyChiTieu
 
         private void FrmBaoCao_Load(object sender, EventArgs e)
         {
+            UserControlMenu ucMenu = new UserControlMenu();
+            containerMenu.Controls.Add(ucMenu);
             displayDays();
         }
         private void displayDays()

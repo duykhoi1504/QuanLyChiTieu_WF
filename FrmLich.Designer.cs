@@ -30,14 +30,11 @@ namespace QuanLyChiTieu
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLich));
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.listView1 = new System.Windows.Forms.ListView();
             this.DanhMuc = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SoTien = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.DateThuChi = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.GhiChu = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.daycontainer = new System.Windows.Forms.FlowLayoutPanel();
             this.btprevious = new System.Windows.Forms.Button();
@@ -57,62 +54,11 @@ namespace QuanLyChiTieu
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.DateThuChi = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.groupBox3.SuspendLayout();
+            this.containerMenu = new System.Windows.Forms.FlowLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             this.SuspendLayout();
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.BackColor = System.Drawing.Color.White;
-            this.groupBox3.Controls.Add(this.button5);
-            this.groupBox3.Controls.Add(this.button3);
-            this.groupBox3.Controls.Add(this.button4);
-            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(5, 159);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(148, 395);
-            this.groupBox3.TabIndex = 23;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Menu";
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.button5.Location = new System.Drawing.Point(3, 111);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(138, 41);
-            this.button5.TabIndex = 0;
-            this.button5.Text = "Báo Cáo";
-            this.button5.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.button3.Location = new System.Drawing.Point(3, 36);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(138, 41);
-            this.button3.TabIndex = 0;
-            this.button3.Text = "Nhập";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.Silver;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.button4.Location = new System.Drawing.Point(3, 73);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(138, 41);
-            this.button4.TabIndex = 0;
-            this.button4.Text = "Lịch";
-            this.button4.UseVisualStyleBackColor = false;
             // 
             // pictureBox10
             // 
@@ -148,6 +94,11 @@ namespace QuanLyChiTieu
             // 
             this.SoTien.Text = "Số tiền";
             this.SoTien.Width = 120;
+            // 
+            // DateThuChi
+            // 
+            this.DateThuChi.Text = "Date";
+            this.DateThuChi.Width = 120;
             // 
             // GhiChu
             // 
@@ -334,11 +285,6 @@ namespace QuanLyChiTieu
             this.dateTimePicker1.Size = new System.Drawing.Size(208, 22);
             this.dateTimePicker1.TabIndex = 28;
             // 
-            // DateThuChi
-            // 
-            this.DateThuChi.Text = "Date";
-            this.DateThuChi.Width = 120;
-            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.White;
@@ -361,12 +307,20 @@ namespace QuanLyChiTieu
             this.button2.Text = "Close";
             this.button2.UseVisualStyleBackColor = false;
             // 
+            // containerMenu
+            // 
+            this.containerMenu.Location = new System.Drawing.Point(12, 145);
+            this.containerMenu.Name = "containerMenu";
+            this.containerMenu.Size = new System.Drawing.Size(151, 456);
+            this.containerMenu.TabIndex = 30;
+            // 
             // FrmLich
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1153, 758);
+            this.Controls.Add(this.containerMenu);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -387,13 +341,11 @@ namespace QuanLyChiTieu
             this.Controls.Add(this.btnext);
             this.Controls.Add(this.btprevious);
             this.Controls.Add(this.daycontainer);
-            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.pictureBox10);
             this.Controls.Add(this.listView1);
             this.Name = "FrmLich";
-            this.Text = "FrmBaoCao";
+            this.Text = "Lich";
             this.Load += new System.EventHandler(this.FrmBaoCao_Load);
-            this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -401,11 +353,6 @@ namespace QuanLyChiTieu
         }
 
         #endregion
-
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.ColumnHeader DanhMuc;
@@ -432,5 +379,6 @@ namespace QuanLyChiTieu
         private System.Windows.Forms.ColumnHeader DateThuChi;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.FlowLayoutPanel containerMenu;
     }
 }

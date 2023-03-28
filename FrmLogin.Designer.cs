@@ -66,18 +66,17 @@ namespace QuanLyChiTieu
             // txtTaiKhoan
             // 
             this.txtTaiKhoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTaiKhoan.ForeColor = System.Drawing.Color.Black;
             this.txtTaiKhoan.Location = new System.Drawing.Point(320, 63);
             this.txtTaiKhoan.Multiline = true;
             this.txtTaiKhoan.Name = "txtTaiKhoan";
             this.txtTaiKhoan.Size = new System.Drawing.Size(329, 45);
             this.txtTaiKhoan.TabIndex = 2;
-            this.txtTaiKhoan.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox1.Location = new System.Drawing.Point(3, 8);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(46, 50);
@@ -96,7 +95,7 @@ namespace QuanLyChiTieu
             this.panel1.ForeColor = System.Drawing.Color.Crimson;
             this.panel1.Location = new System.Drawing.Point(89, 54);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(181, 67);
+            this.panel1.Size = new System.Drawing.Size(181, 76);
             this.panel1.TabIndex = 7;
             // 
             // txtMatKhau
@@ -108,7 +107,6 @@ namespace QuanLyChiTieu
             this.txtMatKhau.PasswordChar = 'x';
             this.txtMatKhau.Size = new System.Drawing.Size(329, 45);
             this.txtMatKhau.TabIndex = 2;
-            this.txtMatKhau.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // panel2
             // 
@@ -121,14 +119,13 @@ namespace QuanLyChiTieu
             this.panel2.ForeColor = System.Drawing.Color.Crimson;
             this.panel2.Location = new System.Drawing.Point(89, 176);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(181, 67);
+            this.panel2.Size = new System.Drawing.Size(181, 75);
             this.panel2.TabIndex = 7;
             // 
             // pictureBox2
             // 
             this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox2.Location = new System.Drawing.Point(3, 8);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(46, 50);
@@ -146,7 +143,7 @@ namespace QuanLyChiTieu
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(107, 34);
             this.label3.TabIndex = 0;
-            this.label3.Text = "Account:";
+            this.label3.Text = "Password:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // btExit
@@ -185,8 +182,9 @@ namespace QuanLyChiTieu
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(782, 453);
+            this.ControlBox = false;
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btDangNhap);

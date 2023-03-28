@@ -61,7 +61,7 @@ namespace QuanLyChiTieu
             this.Controls.Add(this.lbdays);
             this.Name = "UserControlDays";
             this.Size = new System.Drawing.Size(131, 73);
-            this.Load += new System.EventHandler(this.UserControlDays_Load);
+            
             this.ResumeLayout(false);
             this.PerformLayout();
 
