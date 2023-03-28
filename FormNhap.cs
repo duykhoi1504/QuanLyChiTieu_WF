@@ -12,8 +12,7 @@ namespace QuanLyChiTieu
 {
     public partial class FrmNhap : Form
     {
-        public static int rdChoose ;
-        public static string tenDM;
+        List<SoChiTieu> qlsct = new List<SoChiTieu>();
         public FrmNhap()
         {
             InitializeComponent();
@@ -21,7 +20,7 @@ namespace QuanLyChiTieu
 
         private void btChi_Click(object sender, EventArgs e)
         {
-            txtNhaptien.Text ="Tiền chi:";
+            lbnhaptien.Text ="Tiền chi:";
             btThu.BackColor = Color.White;
             containerDanhmuc.Controls.Clear();
             UserControlChi ucChi = new UserControlChi();
@@ -32,7 +31,7 @@ namespace QuanLyChiTieu
 
         private void btThu_Click(object sender, EventArgs e)
         {
-            txtNhaptien.Text = "Tiền thu:";
+            lbnhaptien.Text = "Tiền thu:";
             
             btChi.BackColor = Color.White;
             containerDanhmuc.Controls.Clear();
@@ -49,25 +48,34 @@ namespace QuanLyChiTieu
             btChi.BackColor = Color.Orange;
         }
         //hàm chỉ cho phep nhap so vao txtNhaptien
-        private void txtTienthu_KeyPress(object sender, KeyPressEventArgs e)
+      
+
+        private void txtAccept_Click(object sender, EventArgs e)
+        {
+            
+
+            if (txtSotien.Text == "") return;
+            ListViewItem item = new ListViewItem(FrmMain.tenDM);
+            item.SubItems.Add(txtSotien.Text);
+
+            item.SubItems.Add(dtNgaythuchi.Value.ToString());
+            item.SubItems.Add(txtGhichu.Text);
+
+            item.ImageIndex = FrmMain.rdChoose;
+            listThuchi.Items.Add(item);
+
+            SoChiTieu a = new SoChiTieu(FrmMain.tenDM, txtSotien.Text, dtNgaythuchi.Value.ToString(), txtGhichu.Text);
+            
+
+
+        }
+
+        private void txtSotien_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
                 e.Handled = true;
             }
-        }
-
-        private void txtAccept_Click(object sender, EventArgs e)
-        {
-            if (txtNhaptienthuchi.Text == "") return;
-            ListViewItem item = new ListViewItem(tenDM);
-            item.SubItems.Add(txtNhaptien.Text);
-
-            item.SubItems.Add(dtNgaythuchi.Value.ToString());
-            item.SubItems.Add(txtGhichu.Text);
-            item.ImageIndex = rdChoose;
-            listThuchi.Items.Add(item);
-
         }
     }
 }

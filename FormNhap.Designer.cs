@@ -46,18 +46,18 @@ namespace QuanLyChiTieu
             this.SoTien = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.DateThuChi = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.GhiChu = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.imageListLarge = new System.Windows.Forms.ImageList(this.components);
+            this.imageListSmall = new System.Windows.Forms.ImageList(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txtNhaptienthuchi = new System.Windows.Forms.TextBox();
+            this.txtSotien = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtNhaptien = new System.Windows.Forms.Label();
+            this.lbnhaptien = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtGhichu = new System.Windows.Forms.TextBox();
             this.dtNgaythuchi = new System.Windows.Forms.DateTimePicker();
             this.btThu = new System.Windows.Forms.Button();
             this.btChi = new System.Windows.Forms.Button();
-            this.imageListLarge = new System.Windows.Forms.ImageList(this.components);
-            this.imageListSmall = new System.Windows.Forms.ImageList(this.components);
             this.txtAccept = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -206,12 +206,50 @@ namespace QuanLyChiTieu
             this.GhiChu.Text = "Ghi chú";
             this.GhiChu.Width = 120;
             // 
+            // imageListLarge
+            // 
+            this.imageListLarge.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListLarge.ImageStream")));
+            this.imageListLarge.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageListLarge.Images.SetKeyName(0, "z4208554600082_48f3c7e22c59ad7664a7ab5171727da7 (1).png");
+            this.imageListLarge.Images.SetKeyName(1, "z4208554795397_0cac8539709f1bb37ec066a179edc0a5.jpg");
+            this.imageListLarge.Images.SetKeyName(2, "phone-call.png");
+            this.imageListLarge.Images.SetKeyName(3, "z4208554639929_cf6670320635a16aafe14cec5acf853c.jpg");
+            this.imageListLarge.Images.SetKeyName(4, "z4208554675922_9050253764c06bda622198944092b770.png");
+            this.imageListLarge.Images.SetKeyName(5, "z4208554687117_a809c1700bd58e78ac7d99e17dc845a8.png");
+            this.imageListLarge.Images.SetKeyName(6, "z4208554592380_1b8f9ecd715375255e07390dbc3f23f9.png");
+            this.imageListLarge.Images.SetKeyName(7, "z4208554687068_b5219bac464394579f2fb5764e8d1666.png");
+            this.imageListLarge.Images.SetKeyName(8, "z4208554813353_5f95f300b0d146e8028a6cc6a8b9dc3b.png");
+            this.imageListLarge.Images.SetKeyName(9, "tienluong.png");
+            this.imageListLarge.Images.SetKeyName(10, "tienphucap.png");
+            this.imageListLarge.Images.SetKeyName(11, "tienthuong.png");
+            this.imageListLarge.Images.SetKeyName(12, "dautu.png");
+            this.imageListLarge.Images.SetKeyName(13, "thunhapphu.png");
+            // 
+            // imageListSmall
+            // 
+            this.imageListSmall.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListSmall.ImageStream")));
+            this.imageListSmall.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageListSmall.Images.SetKeyName(0, "z4208554600082_48f3c7e22c59ad7664a7ab5171727da7 (1).png");
+            this.imageListSmall.Images.SetKeyName(1, "z4208554795397_0cac8539709f1bb37ec066a179edc0a5.jpg");
+            this.imageListSmall.Images.SetKeyName(2, "phone-call.png");
+            this.imageListSmall.Images.SetKeyName(3, "z4208554639929_cf6670320635a16aafe14cec5acf853c.jpg");
+            this.imageListSmall.Images.SetKeyName(4, "z4208554675922_9050253764c06bda622198944092b770.png");
+            this.imageListSmall.Images.SetKeyName(5, "z4208554687117_a809c1700bd58e78ac7d99e17dc845a8.png");
+            this.imageListSmall.Images.SetKeyName(6, "z4208554592380_1b8f9ecd715375255e07390dbc3f23f9.png");
+            this.imageListSmall.Images.SetKeyName(7, "z4208554687068_b5219bac464394579f2fb5764e8d1666.png");
+            this.imageListSmall.Images.SetKeyName(8, "z4208554813353_5f95f300b0d146e8028a6cc6a8b9dc3b.png");
+            this.imageListSmall.Images.SetKeyName(9, "tienluong.png");
+            this.imageListSmall.Images.SetKeyName(10, "tienphucap.png");
+            this.imageListSmall.Images.SetKeyName(11, "tienthuong.png");
+            this.imageListSmall.Images.SetKeyName(12, "dautu.png");
+            this.imageListSmall.Images.SetKeyName(13, "thunhapphu.png");
+            // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.txtNhaptienthuchi);
+            this.panel1.Controls.Add(this.txtSotien);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.txtNhaptien);
+            this.panel1.Controls.Add(this.lbnhaptien);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.txtGhichu);
             this.panel1.Controls.Add(this.dtNgaythuchi);
@@ -220,15 +258,15 @@ namespace QuanLyChiTieu
             this.panel1.Size = new System.Drawing.Size(604, 91);
             this.panel1.TabIndex = 28;
             // 
-            // txtNhaptienthuchi
+            // txtSotien
             // 
-            this.txtNhaptienthuchi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNhaptienthuchi.Location = new System.Drawing.Point(97, 42);
-            this.txtNhaptienthuchi.Multiline = true;
-            this.txtNhaptienthuchi.Name = "txtNhaptienthuchi";
-            this.txtNhaptienthuchi.Size = new System.Drawing.Size(200, 32);
-            this.txtNhaptienthuchi.TabIndex = 2;
-            this.txtNhaptienthuchi.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTienthu_KeyPress);
+            this.txtSotien.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSotien.Location = new System.Drawing.Point(97, 42);
+            this.txtSotien.Multiline = true;
+            this.txtSotien.Name = "txtSotien";
+            this.txtSotien.Size = new System.Drawing.Size(200, 32);
+            this.txtSotien.TabIndex = 2;
+            this.txtSotien.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSotien_KeyPress);
             // 
             // label1
             // 
@@ -248,14 +286,14 @@ namespace QuanLyChiTieu
             this.label4.TabIndex = 0;
             this.label4.Text = "VND";
             // 
-            // txtNhaptien
+            // lbnhaptien
             // 
-            this.txtNhaptien.AutoSize = true;
-            this.txtNhaptien.Location = new System.Drawing.Point(17, 49);
-            this.txtNhaptien.Name = "txtNhaptien";
-            this.txtNhaptien.Size = new System.Drawing.Size(62, 17);
-            this.txtNhaptien.TabIndex = 0;
-            this.txtNhaptien.Text = "Tiền chi:";
+            this.lbnhaptien.AutoSize = true;
+            this.lbnhaptien.Location = new System.Drawing.Point(17, 49);
+            this.lbnhaptien.Name = "lbnhaptien";
+            this.lbnhaptien.Size = new System.Drawing.Size(62, 17);
+            this.lbnhaptien.TabIndex = 0;
+            this.lbnhaptien.Text = "Tiền chi:";
             // 
             // label2
             // 
@@ -307,44 +345,6 @@ namespace QuanLyChiTieu
             this.btChi.Text = "Tiền chi";
             this.btChi.UseVisualStyleBackColor = false;
             this.btChi.Click += new System.EventHandler(this.btChi_Click);
-            // 
-            // imageListLarge
-            // 
-            this.imageListLarge.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListLarge.ImageStream")));
-            this.imageListLarge.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageListLarge.Images.SetKeyName(0, "z4208554600082_48f3c7e22c59ad7664a7ab5171727da7 (1).png");
-            this.imageListLarge.Images.SetKeyName(1, "z4208554795397_0cac8539709f1bb37ec066a179edc0a5.jpg");
-            this.imageListLarge.Images.SetKeyName(2, "phone-call.png");
-            this.imageListLarge.Images.SetKeyName(3, "z4208554639929_cf6670320635a16aafe14cec5acf853c.jpg");
-            this.imageListLarge.Images.SetKeyName(4, "z4208554675922_9050253764c06bda622198944092b770.png");
-            this.imageListLarge.Images.SetKeyName(5, "z4208554687117_a809c1700bd58e78ac7d99e17dc845a8.png");
-            this.imageListLarge.Images.SetKeyName(6, "z4208554592380_1b8f9ecd715375255e07390dbc3f23f9.png");
-            this.imageListLarge.Images.SetKeyName(7, "z4208554687068_b5219bac464394579f2fb5764e8d1666.png");
-            this.imageListLarge.Images.SetKeyName(8, "z4208554813353_5f95f300b0d146e8028a6cc6a8b9dc3b.png");
-            this.imageListLarge.Images.SetKeyName(9, "tienluong.png");
-            this.imageListLarge.Images.SetKeyName(10, "tienphucap.png");
-            this.imageListLarge.Images.SetKeyName(11, "tienthuong.png");
-            this.imageListLarge.Images.SetKeyName(12, "dautu.png");
-            this.imageListLarge.Images.SetKeyName(13, "thunhapphu.png");
-            // 
-            // imageListSmall
-            // 
-            this.imageListSmall.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListSmall.ImageStream")));
-            this.imageListSmall.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageListSmall.Images.SetKeyName(0, "z4208554600082_48f3c7e22c59ad7664a7ab5171727da7 (1).png");
-            this.imageListSmall.Images.SetKeyName(1, "z4208554795397_0cac8539709f1bb37ec066a179edc0a5.jpg");
-            this.imageListSmall.Images.SetKeyName(2, "phone-call.png");
-            this.imageListSmall.Images.SetKeyName(3, "z4208554639929_cf6670320635a16aafe14cec5acf853c.jpg");
-            this.imageListSmall.Images.SetKeyName(4, "z4208554675922_9050253764c06bda622198944092b770.png");
-            this.imageListSmall.Images.SetKeyName(5, "z4208554687117_a809c1700bd58e78ac7d99e17dc845a8.png");
-            this.imageListSmall.Images.SetKeyName(6, "z4208554592380_1b8f9ecd715375255e07390dbc3f23f9.png");
-            this.imageListSmall.Images.SetKeyName(7, "z4208554687068_b5219bac464394579f2fb5764e8d1666.png");
-            this.imageListSmall.Images.SetKeyName(8, "z4208554813353_5f95f300b0d146e8028a6cc6a8b9dc3b.png");
-            this.imageListSmall.Images.SetKeyName(9, "tienluong.png");
-            this.imageListSmall.Images.SetKeyName(10, "tienphucap.png");
-            this.imageListSmall.Images.SetKeyName(11, "tienthuong.png");
-            this.imageListSmall.Images.SetKeyName(12, "dautu.png");
-            this.imageListSmall.Images.SetKeyName(13, "thunhapphu.png");
             // 
             // txtAccept
             // 
@@ -402,10 +402,10 @@ namespace QuanLyChiTieu
         private System.Windows.Forms.ColumnHeader DateThuChi;
         private System.Windows.Forms.ColumnHeader GhiChu;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox txtNhaptienthuchi;
+        private System.Windows.Forms.TextBox txtSotien;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label txtNhaptien;
+        private System.Windows.Forms.Label lbnhaptien;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtGhichu;
         private System.Windows.Forms.DateTimePicker dtNgaythuchi;

@@ -12,79 +12,81 @@ namespace QuanLyChiTieu
 {
     public partial class UserControlChi : UserControl
     {
-        public static int rdChoose ;
+
         public UserControlChi()
         {
             InitializeComponent();
         }
 
+
+
+
+
         private void rdThuenha_CheckedChanged(object sender, EventArgs e)
         {
+            FrmMain.tenDM = rdThuenha.Text;
+            FrmMain.rdChoose = 0;
+            FrmMain.isThu = false;
 
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
+        private void rdHoctap_CheckedChanged(object sender, EventArgs e)
         {
-
+            FrmMain.tenDM = rdHoctap.Text;
+            FrmMain.isThu = false;
+            FrmMain.rdChoose = 1;
         }
 
-        private void UserControlChi_Load(object sender, EventArgs e)
+        private void rdPhilienlac_CheckedChanged(object sender, EventArgs e)
         {
-            if (rdThuenha.Checked)
-            {
-
-                FrmNhap.tenDM = rdThuenha.Text;
-                FrmNhap.rdChoose = 0;
-            }
-            else if (rdHoctap.Checked)
-            {
-                FrmNhap.tenDM = rdHoctap.Text;
-
-                FrmNhap.rdChoose = 1;
-            }
-            else if (rdPhilienlac.Checked)
-            {
-                FrmNhap.tenDM = rdPhilienlac.Text;
-                FrmNhap.rdChoose = 2;
-            }
-            else if (rdDiennuoc.Checked)
-
-            {
-                FrmNhap.tenDM = rdDiennuoc.Text;
-                FrmNhap.rdChoose = 3;
-            }
-            else if (rdMuasam.Checked)
-            {
-                FrmNhap.tenDM = rdMuasam.Text;
-                FrmNhap.rdChoose = 4;
-            }
-            else if (rdYte.Checked)
-            {
-                FrmNhap.tenDM = rdYte.Text;
-
-                FrmNhap.rdChoose = 5;
-            }
-            else if (rdDichuyen.Checked)
-            {
-                FrmNhap.tenDM = rdDichuyen.Text;
-
-                FrmNhap.rdChoose = 6;
-            }
-            else if (rdAnuong.Checked)
-            {
-                FrmNhap.tenDM = rdAnuong.Text;
-
-                FrmNhap.rdChoose = 7;
-            }
-            else if (rdPhikhac.Checked)
-            {
-                FrmNhap.tenDM = rdPhikhac.Text;
-
-                FrmNhap.rdChoose = 8;
-            }
-
+            FrmMain.tenDM = rdPhilienlac.Text;
+            FrmMain.isThu = false;
+            FrmMain.rdChoose = 2;
         }
 
-       
+        private void rdDiennuoc_CheckedChanged(object sender, EventArgs e)
+        {
+            FrmMain.tenDM = rdDiennuoc.Text;
+            FrmMain.isThu = false;
+            FrmMain.rdChoose = 3;
+        }
+
+        private void rdMuasam_CheckedChanged(object sender, EventArgs e)
+        {
+            FrmMain.tenDM = rdMuasam.Text;
+            FrmMain.isThu = false;
+            FrmMain.rdChoose = 4;
+        }
+
+        private void rdYte_CheckedChanged(object sender, EventArgs e)
+        {
+            FrmMain.tenDM = rdYte.Text;
+            FrmMain.isThu = false;
+
+            FrmMain.rdChoose = 5;
+        }
+
+        private void rdDichuyen_CheckedChanged(object sender, EventArgs e)
+        {
+            FrmMain.tenDM = rdDichuyen.Text;
+            FrmMain.isThu = false;
+
+            FrmMain.rdChoose = 6;
+        }
+
+        private void rdAnuong_CheckedChanged(object sender, EventArgs e)
+        {
+            FrmMain.tenDM = rdAnuong.Text;
+            FrmMain.isThu = false;
+
+            FrmMain.rdChoose = 7;
+        }
+
+        private void rdPhikhac_CheckedChanged(object sender, EventArgs e)
+        {
+            FrmMain.tenDM = rdPhikhac.Text;
+            FrmMain.isThu = false;
+            FrmMain.rdChoose = 8;
+        }
     }
 }

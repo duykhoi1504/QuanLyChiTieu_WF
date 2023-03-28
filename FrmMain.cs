@@ -14,8 +14,11 @@ namespace QuanLyChiTieu
     public partial class FrmMain : Form
     {
         public static string DangNhap = "";
-
-       
+        public static int rdChoose = 0;
+        public static string tenDM;
+        public static bool isThu = true;
+        
+        
 
 
         public FrmMain()

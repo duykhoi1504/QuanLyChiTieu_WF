@@ -31,24 +31,24 @@ namespace QuanLyChiTieu
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControlThu));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.rdTienthuong = new System.Windows.Forms.RadioButton();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.rdThunhapphu = new System.Windows.Forms.RadioButton();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.rdTienphucap = new System.Windows.Forms.RadioButton();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.rdDautu = new System.Windows.Forms.RadioButton();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.rdTienluong = new System.Windows.Forms.RadioButton();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.rdTienluong = new System.Windows.Forms.RadioButton();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.groupBox1.SuspendLayout();
+            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -63,6 +63,23 @@ namespace QuanLyChiTieu
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh mục";
             // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.rdTienthuong);
+            this.panel3.Controls.Add(this.pictureBox9);
+            this.panel3.Controls.Add(this.rdThunhapphu);
+            this.panel3.Controls.Add(this.rdTienphucap);
+            this.panel3.Controls.Add(this.pictureBox6);
+            this.panel3.Controls.Add(this.rdDautu);
+            this.panel3.Controls.Add(this.pictureBox5);
+            this.panel3.Controls.Add(this.rdTienluong);
+            this.panel3.Controls.Add(this.pictureBox2);
+            this.panel3.Controls.Add(this.pictureBox1);
+            this.panel3.Location = new System.Drawing.Point(23, 33);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(554, 140);
+            this.panel3.TabIndex = 11;
+            // 
             // rdTienthuong
             // 
             this.rdTienthuong.AutoSize = true;
@@ -74,6 +91,7 @@ namespace QuanLyChiTieu
             this.rdTienthuong.TabStop = true;
             this.rdTienthuong.Text = "Tiền thưởng";
             this.rdTienthuong.UseVisualStyleBackColor = true;
+            this.rdTienthuong.CheckedChanged += new System.EventHandler(this.rdTienthuong_CheckedChanged);
             // 
             // pictureBox9
             // 
@@ -97,17 +115,7 @@ namespace QuanLyChiTieu
             this.rdThunhapphu.TabStop = true;
             this.rdThunhapphu.Text = "Thu nhập\r\n phụ";
             this.rdThunhapphu.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.BackColor = System.Drawing.Color.White;
-            this.pictureBox6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox6.BackgroundImage")));
-            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox6.Location = new System.Drawing.Point(175, 58);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(41, 45);
-            this.pictureBox6.TabIndex = 10;
-            this.pictureBox6.TabStop = false;
+            this.rdThunhapphu.CheckedChanged += new System.EventHandler(this.rdThunhapphu_CheckedChanged);
             // 
             // rdTienphucap
             // 
@@ -120,17 +128,18 @@ namespace QuanLyChiTieu
             this.rdTienphucap.TabStop = true;
             this.rdTienphucap.Text = "Tiền phụ\r\n cấp";
             this.rdTienphucap.UseVisualStyleBackColor = true;
+            this.rdTienphucap.CheckedChanged += new System.EventHandler(this.rdTienphucap_CheckedChanged);
             // 
-            // pictureBox5
+            // pictureBox6
             // 
-            this.pictureBox5.BackColor = System.Drawing.Color.White;
-            this.pictureBox5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox5.BackgroundImage")));
-            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox5.Location = new System.Drawing.Point(175, 3);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(41, 45);
-            this.pictureBox5.TabIndex = 10;
-            this.pictureBox5.TabStop = false;
+            this.pictureBox6.BackColor = System.Drawing.Color.White;
+            this.pictureBox6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox6.BackgroundImage")));
+            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox6.Location = new System.Drawing.Point(175, 58);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(41, 45);
+            this.pictureBox6.TabIndex = 10;
+            this.pictureBox6.TabStop = false;
             // 
             // rdDautu
             // 
@@ -143,6 +152,31 @@ namespace QuanLyChiTieu
             this.rdDautu.TabStop = true;
             this.rdDautu.Text = "Đầu tư";
             this.rdDautu.UseVisualStyleBackColor = true;
+            this.rdDautu.CheckedChanged += new System.EventHandler(this.rdDautu_CheckedChanged);
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.Color.White;
+            this.pictureBox5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox5.BackgroundImage")));
+            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox5.Location = new System.Drawing.Point(175, 3);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(41, 45);
+            this.pictureBox5.TabIndex = 10;
+            this.pictureBox5.TabStop = false;
+            // 
+            // rdTienluong
+            // 
+            this.rdTienluong.AutoSize = true;
+            this.rdTienluong.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdTienluong.Location = new System.Drawing.Point(50, 15);
+            this.rdTienluong.Name = "rdTienluong";
+            this.rdTienluong.Size = new System.Drawing.Size(107, 22);
+            this.rdTienluong.TabIndex = 9;
+            this.rdTienluong.TabStop = true;
+            this.rdTienluong.Text = "Tiền lương";
+            this.rdTienluong.UseVisualStyleBackColor = true;
+            this.rdTienluong.CheckedChanged += new System.EventHandler(this.rdTienluong_CheckedChanged);
             // 
             // pictureBox2
             // 
@@ -166,35 +200,6 @@ namespace QuanLyChiTieu
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
             // 
-            // rdTienluong
-            // 
-            this.rdTienluong.AutoSize = true;
-            this.rdTienluong.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdTienluong.Location = new System.Drawing.Point(50, 15);
-            this.rdTienluong.Name = "rdTienluong";
-            this.rdTienluong.Size = new System.Drawing.Size(107, 22);
-            this.rdTienluong.TabIndex = 9;
-            this.rdTienluong.TabStop = true;
-            this.rdTienluong.Text = "Tiền lương";
-            this.rdTienluong.UseVisualStyleBackColor = true;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.rdTienthuong);
-            this.panel3.Controls.Add(this.pictureBox9);
-            this.panel3.Controls.Add(this.rdThunhapphu);
-            this.panel3.Controls.Add(this.rdTienphucap);
-            this.panel3.Controls.Add(this.pictureBox6);
-            this.panel3.Controls.Add(this.rdDautu);
-            this.panel3.Controls.Add(this.pictureBox5);
-            this.panel3.Controls.Add(this.rdTienluong);
-            this.panel3.Controls.Add(this.pictureBox2);
-            this.panel3.Controls.Add(this.pictureBox1);
-            this.panel3.Location = new System.Drawing.Point(23, 33);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(554, 140);
-            this.panel3.TabIndex = 11;
-            // 
             // UserControlThu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -203,13 +208,13 @@ namespace QuanLyChiTieu
             this.Name = "UserControlThu";
             this.Size = new System.Drawing.Size(604, 210);
             this.groupBox1.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
