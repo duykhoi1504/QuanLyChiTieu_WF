@@ -17,18 +17,28 @@ namespace QuanLyChiTieu
         public static int rdChoose = 0;
         public static string tenDM;
         public static bool isThu = true;
-        
+        public static List<ListViewItem> toLich;
+        public static double tongChi = 0;
+        public static double tongThu = 0;
+        //public static double tongThuChi=0;
+        ////
+        public static double tienThuchi = 0;
+
 
 
 
 
         public FrmMain()
         {
+            toLich = new List<ListViewItem>();
             FrmLogin f = new FrmLogin();
             f.ShowDialog();
             InitializeComponent();
         }
         private Form currenFormChild;
+
+
+
         private void OpenCHildForm(Form childForm)
         {
             if (currenFormChild != null)
@@ -86,10 +96,13 @@ namespace QuanLyChiTieu
 
         private void HomePicture_Click(object sender, EventArgs e)
         {
+           
+
             if (currenFormChild != null)
             {
                 currenFormChild.Close();
             }
+        
         }
 
         

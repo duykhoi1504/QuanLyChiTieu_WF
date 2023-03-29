@@ -17,12 +17,6 @@ namespace QuanLyChiTieu
         {
             ds.Add(s);
         }
-        public void tongChi()
-        {
-            //foreach(var x in ds)
-            //{
-            //    if()
-            //}
-        }
+       
     }
 }

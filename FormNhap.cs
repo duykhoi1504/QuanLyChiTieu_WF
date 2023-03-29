@@ -12,14 +12,11 @@ namespace QuanLyChiTieu
 {
     public partial class FrmNhap : Form
     {
-       
-        private float tongChi=0;
-        private float tongThu=0;
-        private float tongThuCHi;
-      
+ 
         public FrmNhap()
         {
             InitializeComponent();
+      
         }
 
         private void btChi_Click(object sender, EventArgs e)
@@ -63,28 +60,37 @@ namespace QuanLyChiTieu
             
             if ( FrmMain.isThu== true)
             {
-                int tienThu = int.Parse(txtSotien.Text);
-                item.SubItems.Add(tienThu.ToString());
-                tongThu += tienThu;
+
+                FrmMain.tienThuchi = double.Parse(txtSotien.Text);
+                item.SubItems.Add(FrmMain.tienThuchi.ToString());
+                FrmMain.tongThu += FrmMain.tienThuchi;
             }
             else
             {
-                int tienChi = int.Parse(txtSotien.Text) * -1;
-                item.SubItems.Add(tienChi.ToString());
-                tongChi +=tienChi;
+                FrmMain.tienThuchi = double.Parse(txtSotien.Text) * -1;
+                item.SubItems.Add(FrmMain.tienThuchi.ToString());
+                FrmMain.tongChi += FrmMain.tienThuchi;
 
             }
             item.SubItems.Add(dtNgaythuchi.Value.ToString());
             item.SubItems.Add(txtGhichu.Text);
             item.ImageIndex = FrmMain.rdChoose;
             listThuchi.Items.Add(item);
+            //RESET LAI TEXT BOX NHAP VA GHI CHU
+            txtSotien.Text = "";
+            txtGhichu.Text = "";
+
+            //lien ket listview voi form lich
+            FrmMain.toLich.Add(item);
+            
             //total
-            lbChitieu.Text = tongChi.ToString();
-            lbThunhap.Text = tongThu.ToString();
-            lbThuchi.Text = (tongChi+tongThu).ToString();
+            lbChitieu.Text = FrmMain.tongChi.ToString();
+            lbThunhap.Text = FrmMain.tongThu.ToString();
+            lbThuchi.Text = (FrmMain.tongChi + FrmMain.tongThu).ToString();
 
             //luuu du lieu bang constructor
-            //SoChiTieu a = new SoChiTieu(FrmMain.tenDM, txtSotien.Text, dtNgaythuchi.Value.ToString(), txtGhichu.Text);
+           
+            //SoChiTieu a = new SoChiTieu(FrmMain.tenDM, tienThuchi, dtNgaythuchi.Value.ToString(), txtGhichu.Text);
             //QuanLySoChiTieu ql = new QuanLySoChiTieu(a);
 
 
@@ -97,10 +103,19 @@ namespace QuanLyChiTieu
                 e.Handled = true;
             }
         }
-
-        private void label8_Click(object sender, EventArgs e)
+        private void btXoa_Click(object sender, EventArgs e)
         {
-
+            foreach (ListViewItem item in listThuchi.SelectedItems)
+            {
+                listThuchi.Items.Remove(item);
+                FrmMain.toLich.Remove(item);
+            }
         }
+        private void btClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        
     }
 }

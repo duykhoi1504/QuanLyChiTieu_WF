@@ -32,8 +32,8 @@ namespace QuanLyChiTieu
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmNhap));
             this.containerDanhmuc = new System.Windows.Forms.FlowLayoutPanel();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
+            this.btClose = new System.Windows.Forms.Button();
+            this.btXoa = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.lbThuchi = new System.Windows.Forms.Label();
             this.lbThunhap = new System.Windows.Forms.Label();
@@ -65,37 +65,41 @@ namespace QuanLyChiTieu
             // 
             // containerDanhmuc
             // 
+            this.containerDanhmuc.BackColor = System.Drawing.Color.Transparent;
             this.containerDanhmuc.Location = new System.Drawing.Point(3, 154);
             this.containerDanhmuc.Name = "containerDanhmuc";
             this.containerDanhmuc.Size = new System.Drawing.Size(618, 210);
             this.containerDanhmuc.TabIndex = 30;
             // 
-            // button8
+            // btClose
             // 
-            this.button8.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.button8.Location = new System.Drawing.Point(500, 545);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(105, 41);
-            this.button8.TabIndex = 31;
-            this.button8.Text = "Close";
-            this.button8.UseVisualStyleBackColor = false;
+            this.btClose.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btClose.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.btClose.Location = new System.Drawing.Point(500, 545);
+            this.btClose.Name = "btClose";
+            this.btClose.Size = new System.Drawing.Size(105, 41);
+            this.btClose.TabIndex = 31;
+            this.btClose.Text = "Close";
+            this.btClose.UseVisualStyleBackColor = false;
+            this.btClose.Click += new System.EventHandler(this.btClose_Click);
             // 
-            // button7
+            // btXoa
             // 
-            this.button7.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.button7.Location = new System.Drawing.Point(391, 545);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(105, 41);
-            this.button7.TabIndex = 32;
-            this.button7.Text = "Sửa";
-            this.button7.UseVisualStyleBackColor = false;
+            this.btXoa.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btXoa.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.btXoa.Location = new System.Drawing.Point(391, 545);
+            this.btXoa.Name = "btXoa";
+            this.btXoa.Size = new System.Drawing.Size(105, 41);
+            this.btXoa.TabIndex = 32;
+            this.btXoa.Text = "Xóa";
+            this.btXoa.UseVisualStyleBackColor = false;
+            this.btXoa.Click += new System.EventHandler(this.btXoa_Click);
             // 
             // groupBox2
             // 
+            this.groupBox2.BackColor = System.Drawing.Color.Transparent;
             this.groupBox2.Controls.Add(this.lbThuchi);
             this.groupBox2.Controls.Add(this.lbThunhap);
             this.groupBox2.Controls.Add(this.lbChitieu);
@@ -138,7 +142,6 @@ namespace QuanLyChiTieu
             this.lbChitieu.Size = new System.Drawing.Size(50, 25);
             this.lbChitieu.TabIndex = 1;
             this.lbChitieu.Text = "-0 đ";
-            this.lbChitieu.Click += new System.EventHandler(this.label8_Click);
             // 
             // label7
             // 
@@ -177,6 +180,7 @@ namespace QuanLyChiTieu
             this.SoTien,
             this.DateThuChi,
             this.GhiChu});
+            this.listThuchi.FullRowSelect = true;
             this.listThuchi.HideSelection = false;
             this.listThuchi.LargeImageList = this.imageListLarge;
             this.listThuchi.Location = new System.Drawing.Point(3, 415);
@@ -247,6 +251,7 @@ namespace QuanLyChiTieu
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Controls.Add(this.txtSotien);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label4);
@@ -363,10 +368,11 @@ namespace QuanLyChiTieu
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(633, 595);
             this.Controls.Add(this.containerDanhmuc);
-            this.Controls.Add(this.button8);
-            this.Controls.Add(this.button7);
+            this.Controls.Add(this.btClose);
+            this.Controls.Add(this.btXoa);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.listThuchi);
             this.Controls.Add(this.txtAccept);
@@ -388,8 +394,8 @@ namespace QuanLyChiTieu
         #endregion
 
         private System.Windows.Forms.FlowLayoutPanel containerDanhmuc;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button btClose;
+        private System.Windows.Forms.Button btXoa;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label lbThuchi;
         private System.Windows.Forms.Label lbThunhap;

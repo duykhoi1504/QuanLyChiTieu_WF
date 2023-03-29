@@ -29,7 +29,9 @@ namespace QuanLyChiTieu
         /// </summary>
         private void InitializeComponent()
         {
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLich));
+            this.listThuChi = new System.Windows.Forms.ListView();
             this.DanhMuc = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SoTien = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.DateThuChi = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -46,30 +48,35 @@ namespace QuanLyChiTieu
             this.label7 = new System.Windows.Forms.Label();
             this.LBDATE = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.lbThu = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
+            this.lbChi = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.lbTong = new System.Windows.Forms.Label();
+            this.dtDate = new System.Windows.Forms.DateTimePicker();
+            this.btXoa = new System.Windows.Forms.Button();
+            this.btClose = new System.Windows.Forms.Button();
+            this.imageListLarge = new System.Windows.Forms.ImageList(this.components);
+            this.imageListSmall = new System.Windows.Forms.ImageList(this.components);
             this.SuspendLayout();
             // 
-            // listView1
+            // listThuChi
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.listThuChi.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.DanhMuc,
             this.SoTien,
             this.DateThuChi,
             this.GhiChu});
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(6, 583);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(843, 158);
-            this.listView1.TabIndex = 19;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.listThuChi.FullRowSelect = true;
+            this.listThuChi.HideSelection = false;
+            this.listThuChi.LargeImageList = this.imageListLarge;
+            this.listThuChi.Location = new System.Drawing.Point(6, 583);
+            this.listThuChi.Name = "listThuChi";
+            this.listThuChi.Size = new System.Drawing.Size(843, 158);
+            this.listThuChi.StateImageList = this.imageListSmall;
+            this.listThuChi.TabIndex = 19;
+            this.listThuChi.UseCompatibleStateImageBehavior = false;
+            this.listThuChi.View = System.Windows.Forms.View.Details;
             // 
             // DanhMuc
             // 
@@ -93,6 +100,7 @@ namespace QuanLyChiTieu
             // 
             // daycontainer
             // 
+            this.daycontainer.BackColor = System.Drawing.Color.Transparent;
             this.daycontainer.Location = new System.Drawing.Point(3, 73);
             this.daycontainer.Name = "daycontainer";
             this.daycontainer.Size = new System.Drawing.Size(959, 476);
@@ -126,6 +134,7 @@ namespace QuanLyChiTieu
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(30, 46);
             this.label1.Name = "label1";
@@ -136,6 +145,7 @@ namespace QuanLyChiTieu
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(168, 46);
             this.label2.Name = "label2";
@@ -146,6 +156,7 @@ namespace QuanLyChiTieu
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(309, 46);
             this.label3.Name = "label3";
@@ -156,6 +167,7 @@ namespace QuanLyChiTieu
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(433, 46);
             this.label4.Name = "label4";
@@ -166,6 +178,7 @@ namespace QuanLyChiTieu
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(728, 46);
             this.label5.Name = "label5";
@@ -176,6 +189,7 @@ namespace QuanLyChiTieu
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(581, 46);
             this.label6.Name = "label6";
@@ -186,6 +200,7 @@ namespace QuanLyChiTieu
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(854, 46);
             this.label7.Name = "label7";
@@ -195,6 +210,7 @@ namespace QuanLyChiTieu
             // 
             // LBDATE
             // 
+            this.LBDATE.BackColor = System.Drawing.Color.Transparent;
             this.LBDATE.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LBDATE.Location = new System.Drawing.Point(236, 9);
             this.LBDATE.Name = "LBDATE";
@@ -202,7 +218,6 @@ namespace QuanLyChiTieu
             this.LBDATE.TabIndex = 0;
             this.LBDATE.Text = "MONTH YEAR";
             this.LBDATE.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-          
             // 
             // label8
             // 
@@ -213,16 +228,16 @@ namespace QuanLyChiTieu
             this.label8.TabIndex = 27;
             this.label8.Text = "Thu nhập:";
             // 
-            // label9
+            // lbThu
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.Blue;
-            this.label9.Location = new System.Drawing.Point(76, 559);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(26, 17);
-            this.label9.TabIndex = 27;
-            this.label9.Text = "0đ";
+            this.lbThu.AutoSize = true;
+            this.lbThu.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbThu.ForeColor = System.Drawing.Color.Blue;
+            this.lbThu.Location = new System.Drawing.Point(67, 559);
+            this.lbThu.Name = "lbThu";
+            this.lbThu.Size = new System.Drawing.Size(26, 17);
+            this.lbThu.TabIndex = 27;
+            this.lbThu.Text = "0đ";
             // 
             // label10
             // 
@@ -233,16 +248,16 @@ namespace QuanLyChiTieu
             this.label10.TabIndex = 27;
             this.label10.Text = "Chi tiêu:";
             // 
-            // label11
+            // lbChi
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.Red;
-            this.label11.Location = new System.Drawing.Point(229, 559);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(26, 17);
-            this.label11.TabIndex = 27;
-            this.label11.Text = "0đ";
+            this.lbChi.AutoSize = true;
+            this.lbChi.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbChi.ForeColor = System.Drawing.Color.Red;
+            this.lbChi.Location = new System.Drawing.Point(206, 559);
+            this.lbChi.Name = "lbChi";
+            this.lbChi.Size = new System.Drawing.Size(26, 17);
+            this.lbChi.TabIndex = 27;
+            this.lbChi.Text = "0đ";
             // 
             // label12
             // 
@@ -253,46 +268,86 @@ namespace QuanLyChiTieu
             this.label12.TabIndex = 27;
             this.label12.Text = "Tổng:";
             // 
-            // label13
+            // lbTong
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.Black;
-            this.label13.Location = new System.Drawing.Point(413, 559);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(26, 17);
-            this.label13.TabIndex = 27;
-            this.label13.Text = "0đ";
+            this.lbTong.AutoSize = true;
+            this.lbTong.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTong.ForeColor = System.Drawing.Color.Black;
+            this.lbTong.Location = new System.Drawing.Point(377, 559);
+            this.lbTong.Name = "lbTong";
+            this.lbTong.Size = new System.Drawing.Size(26, 17);
+            this.lbTong.TabIndex = 27;
+            this.lbTong.Text = "0đ";
             // 
-            // dateTimePicker1
+            // dtDate
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(525, 555);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(208, 22);
-            this.dateTimePicker1.TabIndex = 28;
+            this.dtDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtDate.Location = new System.Drawing.Point(525, 555);
+            this.dtDate.Name = "dtDate";
+            this.dtDate.Size = new System.Drawing.Size(208, 22);
+            this.dtDate.TabIndex = 28;
             // 
-            // button1
+            // btXoa
             // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Location = new System.Drawing.Point(858, 673);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(96, 30);
-            this.button1.TabIndex = 29;
-            this.button1.Text = "Sửa";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btXoa.BackColor = System.Drawing.Color.White;
+            this.btXoa.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btXoa.Location = new System.Drawing.Point(858, 673);
+            this.btXoa.Name = "btXoa";
+            this.btXoa.Size = new System.Drawing.Size(96, 30);
+            this.btXoa.TabIndex = 29;
+            this.btXoa.Text = "Xóa";
+            this.btXoa.UseVisualStyleBackColor = false;
+            this.btXoa.Click += new System.EventHandler(this.btXoa_Click);
             // 
-            // button2
+            // btClose
             // 
-            this.button2.BackColor = System.Drawing.Color.White;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Location = new System.Drawing.Point(858, 709);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(96, 30);
-            this.button2.TabIndex = 29;
-            this.button2.Text = "Close";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btClose.BackColor = System.Drawing.Color.White;
+            this.btClose.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btClose.Location = new System.Drawing.Point(858, 709);
+            this.btClose.Name = "btClose";
+            this.btClose.Size = new System.Drawing.Size(96, 30);
+            this.btClose.TabIndex = 29;
+            this.btClose.Text = "Close";
+            this.btClose.UseVisualStyleBackColor = false;
+            this.btClose.Click += new System.EventHandler(this.btClose_Click);
+            // 
+            // imageListLarge
+            // 
+            this.imageListLarge.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListLarge.ImageStream")));
+            this.imageListLarge.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageListLarge.Images.SetKeyName(0, "z4208554600082_48f3c7e22c59ad7664a7ab5171727da7 (1).png");
+            this.imageListLarge.Images.SetKeyName(1, "z4208554795397_0cac8539709f1bb37ec066a179edc0a5.jpg");
+            this.imageListLarge.Images.SetKeyName(2, "phone-call.png");
+            this.imageListLarge.Images.SetKeyName(3, "z4208554639929_cf6670320635a16aafe14cec5acf853c.jpg");
+            this.imageListLarge.Images.SetKeyName(4, "z4208554675922_9050253764c06bda622198944092b770.png");
+            this.imageListLarge.Images.SetKeyName(5, "z4208554687117_a809c1700bd58e78ac7d99e17dc845a8.png");
+            this.imageListLarge.Images.SetKeyName(6, "z4208554592380_1b8f9ecd715375255e07390dbc3f23f9.png");
+            this.imageListLarge.Images.SetKeyName(7, "z4208554687068_b5219bac464394579f2fb5764e8d1666.png");
+            this.imageListLarge.Images.SetKeyName(8, "z4208554813353_5f95f300b0d146e8028a6cc6a8b9dc3b.png");
+            this.imageListLarge.Images.SetKeyName(9, "tienluong.png");
+            this.imageListLarge.Images.SetKeyName(10, "tienphucap.png");
+            this.imageListLarge.Images.SetKeyName(11, "tienthuong.png");
+            this.imageListLarge.Images.SetKeyName(12, "dautu.png");
+            this.imageListLarge.Images.SetKeyName(13, "thunhapphu.png");
+            // 
+            // imageListSmall
+            // 
+            this.imageListSmall.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListSmall.ImageStream")));
+            this.imageListSmall.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageListSmall.Images.SetKeyName(0, "z4208554600082_48f3c7e22c59ad7664a7ab5171727da7 (1).png");
+            this.imageListSmall.Images.SetKeyName(1, "z4208554795397_0cac8539709f1bb37ec066a179edc0a5.jpg");
+            this.imageListSmall.Images.SetKeyName(2, "phone-call.png");
+            this.imageListSmall.Images.SetKeyName(3, "z4208554639929_cf6670320635a16aafe14cec5acf853c.jpg");
+            this.imageListSmall.Images.SetKeyName(4, "z4208554675922_9050253764c06bda622198944092b770.png");
+            this.imageListSmall.Images.SetKeyName(5, "z4208554687117_a809c1700bd58e78ac7d99e17dc845a8.png");
+            this.imageListSmall.Images.SetKeyName(6, "z4208554592380_1b8f9ecd715375255e07390dbc3f23f9.png");
+            this.imageListSmall.Images.SetKeyName(7, "z4208554687068_b5219bac464394579f2fb5764e8d1666.png");
+            this.imageListSmall.Images.SetKeyName(8, "z4208554813353_5f95f300b0d146e8028a6cc6a8b9dc3b.png");
+            this.imageListSmall.Images.SetKeyName(9, "tienluong.png");
+            this.imageListSmall.Images.SetKeyName(10, "tienphucap.png");
+            this.imageListSmall.Images.SetKeyName(11, "tienthuong.png");
+            this.imageListSmall.Images.SetKeyName(12, "dautu.png");
+            this.imageListSmall.Images.SetKeyName(13, "thunhapphu.png");
             // 
             // FrmLich
             // 
@@ -300,12 +355,12 @@ namespace QuanLyChiTieu
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(970, 758);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label9);
+            this.Controls.Add(this.dtDate);
+            this.Controls.Add(this.btClose);
+            this.Controls.Add(this.btXoa);
+            this.Controls.Add(this.lbTong);
+            this.Controls.Add(this.lbChi);
+            this.Controls.Add(this.lbThu);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label8);
@@ -320,7 +375,7 @@ namespace QuanLyChiTieu
             this.Controls.Add(this.btnext);
             this.Controls.Add(this.btprevious);
             this.Controls.Add(this.daycontainer);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.listThuChi);
             this.Name = "FrmLich";
             this.Text = "Lich";
             this.Load += new System.EventHandler(this.FrmBaoCao_Load);
@@ -330,7 +385,7 @@ namespace QuanLyChiTieu
         }
 
         #endregion
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView listThuChi;
         private System.Windows.Forms.ColumnHeader DanhMuc;
         private System.Windows.Forms.ColumnHeader SoTien;
         private System.Windows.Forms.ColumnHeader GhiChu;
@@ -346,14 +401,16 @@ namespace QuanLyChiTieu
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label LBDATE;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lbThu;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label lbChi;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Label lbTong;
+        private System.Windows.Forms.DateTimePicker dtDate;
         private System.Windows.Forms.ColumnHeader DateThuChi;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btXoa;
+        private System.Windows.Forms.Button btClose;
+        private System.Windows.Forms.ImageList imageListLarge;
+        private System.Windows.Forms.ImageList imageListSmall;
     }
 }

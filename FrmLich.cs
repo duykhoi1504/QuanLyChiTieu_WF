@@ -13,16 +13,28 @@ namespace QuanLyChiTieu
     public partial class FrmLich : Form
     {
         int month, year;
+       
         public FrmLich()
         {
             InitializeComponent();
         }
+        //public FrmLich(ListViewItem s)
+        //{
+        //    listThuChi.Items.Add(s);
+        //    InitializeComponent();
+        //}
 
         private void FrmBaoCao_Load(object sender, EventArgs e)
         {
-          
-            
+            lbThu.Text = FrmMain.tongThu.ToString();
+            lbChi.Text = FrmMain.tongChi.ToString();
+            lbTong.Text = (FrmMain.tongThu+FrmMain.tongChi).ToString();
+
+            foreach (ListViewItem item in FrmMain.toLich)
+                listThuChi.Items.Add(item);
             displayDays();
+            //
+
         }
         private void displayDays()
         {
@@ -82,8 +94,6 @@ namespace QuanLyChiTieu
             }
         }
 
-       
-
         private void btnext_Click(object sender, EventArgs e)
         {
             //xóa container
@@ -110,6 +120,19 @@ namespace QuanLyChiTieu
                 ucdays.days(i);
                 daycontainer.Controls.Add(ucdays);
             }
+        }
+        private void btXoa_Click(object sender, EventArgs e)
+        {
+            foreach (ListViewItem item in listThuChi.SelectedItems)
+            {
+                listThuChi.Items.Remove(item);
+                FrmMain.toLich.Remove(item);
+            }
+        }
+
+        private void btClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

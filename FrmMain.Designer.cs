@@ -45,6 +45,7 @@ namespace QuanLyChiTieu
             // 
             // HomePicture
             // 
+            this.HomePicture.BackColor = System.Drawing.Color.Transparent;
             this.HomePicture.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("HomePicture.BackgroundImage")));
             this.HomePicture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.HomePicture.Location = new System.Drawing.Point(12, 12);
@@ -56,6 +57,7 @@ namespace QuanLyChiTieu
             // 
             // groupBox3
             // 
+            this.groupBox3.BackColor = System.Drawing.Color.Transparent;
             this.groupBox3.Controls.Add(this.btBaocao);
             this.groupBox3.Controls.Add(this.btNhap);
             this.groupBox3.Controls.Add(this.btLich);
@@ -82,7 +84,7 @@ namespace QuanLyChiTieu
             // 
             // btNhap
             // 
-            this.btNhap.BackColor = System.Drawing.Color.Orange;
+            this.btNhap.BackColor = System.Drawing.Color.WhiteSmoke;
             this.btNhap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btNhap.ForeColor = System.Drawing.SystemColors.WindowText;
             this.btNhap.Location = new System.Drawing.Point(3, 36);
@@ -108,6 +110,7 @@ namespace QuanLyChiTieu
             // 
             // pnBody
             // 
+            this.pnBody.BackColor = System.Drawing.Color.Transparent;
             this.pnBody.Controls.Add(this.label1);
             this.pnBody.Controls.Add(this.lbIcon);
             this.pnBody.Location = new System.Drawing.Point(152, 12);
@@ -119,7 +122,7 @@ namespace QuanLyChiTieu
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(154, 265);
+            this.label1.Location = new System.Drawing.Point(163, 285);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(281, 20);
             this.label1.TabIndex = 1;
@@ -130,7 +133,7 @@ namespace QuanLyChiTieu
             this.lbIcon.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbIcon.AutoSize = true;
             this.lbIcon.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbIcon.Location = new System.Drawing.Point(118, 169);
+            this.lbIcon.Location = new System.Drawing.Point(140, 169);
             this.lbIcon.Name = "lbIcon";
             this.lbIcon.Size = new System.Drawing.Size(338, 91);
             this.lbIcon.TabIndex = 0;
@@ -141,6 +144,7 @@ namespace QuanLyChiTieu
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(794, 625);
             this.Controls.Add(this.pnBody);
             this.Controls.Add(this.groupBox3);
