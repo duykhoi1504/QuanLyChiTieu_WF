@@ -35,9 +35,9 @@ namespace QuanLyChiTieu
             this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.lbThuchi = new System.Windows.Forms.Label();
+            this.lbThunhap = new System.Windows.Forms.Label();
+            this.lbChitieu = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -96,9 +96,9 @@ namespace QuanLyChiTieu
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.label10);
-            this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Controls.Add(this.label8);
+            this.groupBox2.Controls.Add(this.lbThuchi);
+            this.groupBox2.Controls.Add(this.lbThunhap);
+            this.groupBox2.Controls.Add(this.lbChitieu);
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label6);
@@ -110,34 +110,35 @@ namespace QuanLyChiTieu
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Total";
             // 
-            // label10
+            // lbThuchi
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(120, 91);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(42, 25);
-            this.label10.TabIndex = 1;
-            this.label10.Text = "0 đ";
+            this.lbThuchi.AutoSize = true;
+            this.lbThuchi.Location = new System.Drawing.Point(120, 91);
+            this.lbThuchi.Name = "lbThuchi";
+            this.lbThuchi.Size = new System.Drawing.Size(42, 25);
+            this.lbThuchi.TabIndex = 1;
+            this.lbThuchi.Text = "0 đ";
             // 
-            // label9
+            // lbThunhap
             // 
-            this.label9.AutoSize = true;
-            this.label9.ForeColor = System.Drawing.Color.Blue;
-            this.label9.Location = new System.Drawing.Point(107, 60);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(55, 25);
-            this.label9.TabIndex = 1;
-            this.label9.Text = "+0 đ";
+            this.lbThunhap.AutoSize = true;
+            this.lbThunhap.ForeColor = System.Drawing.Color.Blue;
+            this.lbThunhap.Location = new System.Drawing.Point(107, 60);
+            this.lbThunhap.Name = "lbThunhap";
+            this.lbThunhap.Size = new System.Drawing.Size(55, 25);
+            this.lbThunhap.TabIndex = 1;
+            this.lbThunhap.Text = "+0 đ";
             // 
-            // label8
+            // lbChitieu
             // 
-            this.label8.AutoSize = true;
-            this.label8.ForeColor = System.Drawing.Color.Red;
-            this.label8.Location = new System.Drawing.Point(112, 25);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(50, 25);
-            this.label8.TabIndex = 1;
-            this.label8.Text = "-0 đ";
+            this.lbChitieu.AutoSize = true;
+            this.lbChitieu.ForeColor = System.Drawing.Color.Red;
+            this.lbChitieu.Location = new System.Drawing.Point(112, 25);
+            this.lbChitieu.Name = "lbChitieu";
+            this.lbChitieu.Size = new System.Drawing.Size(50, 25);
+            this.lbChitieu.TabIndex = 1;
+            this.lbChitieu.Text = "-0 đ";
+            this.lbChitieu.Click += new System.EventHandler(this.label8_Click);
             // 
             // label7
             // 
@@ -390,9 +391,9 @@ namespace QuanLyChiTieu
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lbThuchi;
+        private System.Windows.Forms.Label lbThunhap;
+        private System.Windows.Forms.Label lbChitieu;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;

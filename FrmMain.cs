@@ -18,7 +18,8 @@ namespace QuanLyChiTieu
         public static string tenDM;
         public static bool isThu = true;
         
-        
+
+
 
 
         public FrmMain()
