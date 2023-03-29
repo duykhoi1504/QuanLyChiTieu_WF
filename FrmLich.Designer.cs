@@ -36,6 +36,8 @@ namespace QuanLyChiTieu
             this.SoTien = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.DateThuChi = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.GhiChu = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.imageListLarge = new System.Windows.Forms.ImageList(this.components);
+            this.imageListSmall = new System.Windows.Forms.ImageList(this.components);
             this.daycontainer = new System.Windows.Forms.FlowLayoutPanel();
             this.btprevious = new System.Windows.Forms.Button();
             this.btnext = new System.Windows.Forms.Button();
@@ -56,8 +58,6 @@ namespace QuanLyChiTieu
             this.dtDate = new System.Windows.Forms.DateTimePicker();
             this.btXoa = new System.Windows.Forms.Button();
             this.btClose = new System.Windows.Forms.Button();
-            this.imageListLarge = new System.Windows.Forms.ImageList(this.components);
-            this.imageListSmall = new System.Windows.Forms.ImageList(this.components);
             this.SuspendLayout();
             // 
             // listThuChi
@@ -97,6 +97,44 @@ namespace QuanLyChiTieu
             // 
             this.GhiChu.Text = "Ghi chú";
             this.GhiChu.Width = 400;
+            // 
+            // imageListLarge
+            // 
+            this.imageListLarge.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListLarge.ImageStream")));
+            this.imageListLarge.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageListLarge.Images.SetKeyName(0, "z4208554600082_48f3c7e22c59ad7664a7ab5171727da7 (1).png");
+            this.imageListLarge.Images.SetKeyName(1, "z4208554795397_0cac8539709f1bb37ec066a179edc0a5.jpg");
+            this.imageListLarge.Images.SetKeyName(2, "phone-call.png");
+            this.imageListLarge.Images.SetKeyName(3, "z4208554639929_cf6670320635a16aafe14cec5acf853c.jpg");
+            this.imageListLarge.Images.SetKeyName(4, "z4208554675922_9050253764c06bda622198944092b770.png");
+            this.imageListLarge.Images.SetKeyName(5, "z4208554687117_a809c1700bd58e78ac7d99e17dc845a8.png");
+            this.imageListLarge.Images.SetKeyName(6, "z4208554592380_1b8f9ecd715375255e07390dbc3f23f9.png");
+            this.imageListLarge.Images.SetKeyName(7, "z4208554687068_b5219bac464394579f2fb5764e8d1666.png");
+            this.imageListLarge.Images.SetKeyName(8, "z4208554813353_5f95f300b0d146e8028a6cc6a8b9dc3b.png");
+            this.imageListLarge.Images.SetKeyName(9, "tienluong.png");
+            this.imageListLarge.Images.SetKeyName(10, "tienphucap.png");
+            this.imageListLarge.Images.SetKeyName(11, "tienthuong.png");
+            this.imageListLarge.Images.SetKeyName(12, "dautu.png");
+            this.imageListLarge.Images.SetKeyName(13, "thunhapphu.png");
+            // 
+            // imageListSmall
+            // 
+            this.imageListSmall.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListSmall.ImageStream")));
+            this.imageListSmall.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageListSmall.Images.SetKeyName(0, "z4208554600082_48f3c7e22c59ad7664a7ab5171727da7 (1).png");
+            this.imageListSmall.Images.SetKeyName(1, "z4208554795397_0cac8539709f1bb37ec066a179edc0a5.jpg");
+            this.imageListSmall.Images.SetKeyName(2, "phone-call.png");
+            this.imageListSmall.Images.SetKeyName(3, "z4208554639929_cf6670320635a16aafe14cec5acf853c.jpg");
+            this.imageListSmall.Images.SetKeyName(4, "z4208554675922_9050253764c06bda622198944092b770.png");
+            this.imageListSmall.Images.SetKeyName(5, "z4208554687117_a809c1700bd58e78ac7d99e17dc845a8.png");
+            this.imageListSmall.Images.SetKeyName(6, "z4208554592380_1b8f9ecd715375255e07390dbc3f23f9.png");
+            this.imageListSmall.Images.SetKeyName(7, "z4208554687068_b5219bac464394579f2fb5764e8d1666.png");
+            this.imageListSmall.Images.SetKeyName(8, "z4208554813353_5f95f300b0d146e8028a6cc6a8b9dc3b.png");
+            this.imageListSmall.Images.SetKeyName(9, "tienluong.png");
+            this.imageListSmall.Images.SetKeyName(10, "tienphucap.png");
+            this.imageListSmall.Images.SetKeyName(11, "tienthuong.png");
+            this.imageListSmall.Images.SetKeyName(12, "dautu.png");
+            this.imageListSmall.Images.SetKeyName(13, "thunhapphu.png");
             // 
             // daycontainer
             // 
@@ -286,6 +324,7 @@ namespace QuanLyChiTieu
             this.dtDate.Name = "dtDate";
             this.dtDate.Size = new System.Drawing.Size(208, 22);
             this.dtDate.TabIndex = 28;
+            this.dtDate.ValueChanged += new System.EventHandler(this.dtDate_ValueChanged);
             // 
             // btXoa
             // 
@@ -310,44 +349,6 @@ namespace QuanLyChiTieu
             this.btClose.Text = "Close";
             this.btClose.UseVisualStyleBackColor = false;
             this.btClose.Click += new System.EventHandler(this.btClose_Click);
-            // 
-            // imageListLarge
-            // 
-            this.imageListLarge.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListLarge.ImageStream")));
-            this.imageListLarge.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageListLarge.Images.SetKeyName(0, "z4208554600082_48f3c7e22c59ad7664a7ab5171727da7 (1).png");
-            this.imageListLarge.Images.SetKeyName(1, "z4208554795397_0cac8539709f1bb37ec066a179edc0a5.jpg");
-            this.imageListLarge.Images.SetKeyName(2, "phone-call.png");
-            this.imageListLarge.Images.SetKeyName(3, "z4208554639929_cf6670320635a16aafe14cec5acf853c.jpg");
-            this.imageListLarge.Images.SetKeyName(4, "z4208554675922_9050253764c06bda622198944092b770.png");
-            this.imageListLarge.Images.SetKeyName(5, "z4208554687117_a809c1700bd58e78ac7d99e17dc845a8.png");
-            this.imageListLarge.Images.SetKeyName(6, "z4208554592380_1b8f9ecd715375255e07390dbc3f23f9.png");
-            this.imageListLarge.Images.SetKeyName(7, "z4208554687068_b5219bac464394579f2fb5764e8d1666.png");
-            this.imageListLarge.Images.SetKeyName(8, "z4208554813353_5f95f300b0d146e8028a6cc6a8b9dc3b.png");
-            this.imageListLarge.Images.SetKeyName(9, "tienluong.png");
-            this.imageListLarge.Images.SetKeyName(10, "tienphucap.png");
-            this.imageListLarge.Images.SetKeyName(11, "tienthuong.png");
-            this.imageListLarge.Images.SetKeyName(12, "dautu.png");
-            this.imageListLarge.Images.SetKeyName(13, "thunhapphu.png");
-            // 
-            // imageListSmall
-            // 
-            this.imageListSmall.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListSmall.ImageStream")));
-            this.imageListSmall.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageListSmall.Images.SetKeyName(0, "z4208554600082_48f3c7e22c59ad7664a7ab5171727da7 (1).png");
-            this.imageListSmall.Images.SetKeyName(1, "z4208554795397_0cac8539709f1bb37ec066a179edc0a5.jpg");
-            this.imageListSmall.Images.SetKeyName(2, "phone-call.png");
-            this.imageListSmall.Images.SetKeyName(3, "z4208554639929_cf6670320635a16aafe14cec5acf853c.jpg");
-            this.imageListSmall.Images.SetKeyName(4, "z4208554675922_9050253764c06bda622198944092b770.png");
-            this.imageListSmall.Images.SetKeyName(5, "z4208554687117_a809c1700bd58e78ac7d99e17dc845a8.png");
-            this.imageListSmall.Images.SetKeyName(6, "z4208554592380_1b8f9ecd715375255e07390dbc3f23f9.png");
-            this.imageListSmall.Images.SetKeyName(7, "z4208554687068_b5219bac464394579f2fb5764e8d1666.png");
-            this.imageListSmall.Images.SetKeyName(8, "z4208554813353_5f95f300b0d146e8028a6cc6a8b9dc3b.png");
-            this.imageListSmall.Images.SetKeyName(9, "tienluong.png");
-            this.imageListSmall.Images.SetKeyName(10, "tienphucap.png");
-            this.imageListSmall.Images.SetKeyName(11, "tienthuong.png");
-            this.imageListSmall.Images.SetKeyName(12, "dautu.png");
-            this.imageListSmall.Images.SetKeyName(13, "thunhapphu.png");
             // 
             // FrmLich
             // 

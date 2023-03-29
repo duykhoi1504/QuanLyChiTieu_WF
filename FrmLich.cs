@@ -12,8 +12,9 @@ namespace QuanLyChiTieu
 {
     public partial class FrmLich : Form
     {
-        int month, year;
-       
+        int month, year, day;
+        DateTime today = DateTime.Today;
+        double tongthuchitemp = 0;
         public FrmLich()
         {
             InitializeComponent();
@@ -33,7 +34,7 @@ namespace QuanLyChiTieu
             foreach (ListViewItem item in FrmMain.toLich)
                 listThuChi.Items.Add(item);
             displayDays();
-            //
+           
 
         }
         private void displayDays()
@@ -41,10 +42,11 @@ namespace QuanLyChiTieu
             DateTime now = DateTime.Now;
             month = now.Month;
             year = now.Year;
+            day = now.Day;
+
 
             string monthname = DateTimeFormatInfo.CurrentInfo.GetMonthName(month);
             LBDATE.Text = monthname + " " + year;
-
             // lay ngay dau tien cua thang
             DateTime startofthemonth = new DateTime(year, month, 1);
             // lay so ngay cua thang
@@ -62,6 +64,25 @@ namespace QuanLyChiTieu
             {
                 UserControlDays ucdays = new UserControlDays();
                 ucdays.days(i);
+                if (i == day)
+                {
+                    ucdays.BackColor = Color.Orange;
+                }
+                foreach (ListViewItem item in listThuChi.Items)
+                {
+
+                    string dateStr = item.SubItems[2].Text;
+                    double tongthuchiInList = double.Parse(item.SubItems[1].Text);
+                    DateTime itemDate = DateTime.Parse(dateStr);
+                    if (i == itemDate.Day && month == itemDate.Month && year == itemDate.Year)
+                    {
+
+                        tongthuchitemp += tongthuchiInList;
+
+                    }
+                }
+                ucdays.txteve(tongthuchitemp.ToString());
+                tongthuchitemp = 0;
                 daycontainer.Controls.Add(ucdays);
             }
         }
@@ -70,6 +91,7 @@ namespace QuanLyChiTieu
         {
             //xóa container
             daycontainer.Controls.Clear();
+            
             //giảm tháng lên thành tháng trước đó
             month--;
             string monthname = DateTimeFormatInfo.CurrentInfo.GetMonthName(month);
@@ -90,7 +112,26 @@ namespace QuanLyChiTieu
             {
                 UserControlDays ucdays = new UserControlDays();
                 ucdays.days(i);
+                if(i==day && today.Month==month && today.Year==year)
+                {
+                    ucdays.BackColor = Color.Orange;
+                }
+                foreach (ListViewItem item in listThuChi.Items)
+                {
+
+                    string dateStr = item.SubItems[2].Text;
+                    double tongthuchiInList = double.Parse(item.SubItems[1].Text);
+                    DateTime itemDate = DateTime.Parse(dateStr);
+                    if (i == itemDate.Day && month == itemDate.Month && year == itemDate.Year)
+                    {
+                        tongthuchitemp += tongthuchiInList;
+
+                    }
+                }
+                ucdays.txteve(tongthuchitemp.ToString());
+                tongthuchitemp = 0;
                 daycontainer.Controls.Add(ucdays);
+                
             }
         }
 
@@ -98,9 +139,11 @@ namespace QuanLyChiTieu
         {
             //xóa container
             daycontainer.Controls.Clear();
+     
             //tăng tháng lên thành tháng tiếp theo
             month++;
             string monthname = DateTimeFormatInfo.CurrentInfo.GetMonthName(month);
+            //header thang Nam
             LBDATE.Text = monthname + " " + year;
             DateTime startofthemonth = new DateTime(year, month, 1);
             // lay so ngay cua thang
@@ -116,9 +159,84 @@ namespace QuanLyChiTieu
             //tao usercontroll for days
             for (int i = 1; i <= days; i++)
             {
+
                 UserControlDays ucdays = new UserControlDays();
                 ucdays.days(i);
+                if (i == day && today.Month == month && today.Year == year)
+                {
+                    ucdays.BackColor = Color.Orange;
+                }
+                foreach (ListViewItem item in listThuChi.Items)
+                {
+
+                    string dateStr = item.SubItems[2].Text;
+                    double tongthuchiInList = double.Parse(item.SubItems[1].Text);
+                    DateTime itemDate = DateTime.Parse(dateStr);
+                    if (i == itemDate.Day && month == itemDate.Month && year == itemDate.Year)
+                    {
+                        tongthuchitemp += tongthuchiInList;
+
+                    }
+                }
+                ucdays.txteve(tongthuchitemp.ToString());
+                tongthuchitemp = 0;
                 daycontainer.Controls.Add(ucdays);
+                
+            }
+        }
+        private void dtDate_ValueChanged(object sender, EventArgs e)
+        {
+           
+            daycontainer.Controls.Clear();
+            tongthuchitemp = 0;
+            month = dtDate.Value.Month; ;
+            year = dtDate.Value.Year;
+            //
+            string monthname = DateTimeFormatInfo.CurrentInfo.GetMonthName(month);
+
+            LBDATE.Text = monthname + " " + year;
+
+            // lay ngay dau tien cua thang
+            DateTime startofthemonth = new DateTime(year, month, 1);
+            // lay so ngay cua thang
+            int days = DateTime.DaysInMonth(year, month);
+            //doi  startofthemonth sang interger
+            int dayoftheweak = Convert.ToInt32(startofthemonth.DayOfWeek.ToString("d")) + 1;
+            // tao blank usercontroll
+            for (int i = 1; i < dayoftheweak; i++)
+            {
+                UserControlBlank ucblank = new UserControlBlank();
+                daycontainer.Controls.Add(ucblank);
+            }
+            //tao usercontroll cho days
+            for (int i = 1; i <= days; i++)
+            {
+                UserControlDays ucdays = new UserControlDays();
+                ucdays.days(i);
+                if (i == day && today.Month == month && today.Year == year)
+                {
+                    ucdays.BackColor = Color.Orange;
+                }
+                if (i == dtDate.Value.Day)
+                {
+                    ucdays.BackColor = Color.GreenYellow;
+                }
+                foreach (ListViewItem item in listThuChi.Items)
+                {
+
+                    string dateStr = item.SubItems[2].Text;
+                    double tongthuchiInList = double.Parse(item.SubItems[1].Text);
+                    DateTime itemDate = DateTime.Parse(dateStr);
+                    if (i == itemDate.Day && month == itemDate.Month && year == itemDate.Year)
+                    {
+                        tongthuchitemp += tongthuchiInList;
+
+                    }
+                }
+                ucdays.txteve(tongthuchitemp.ToString());
+                daycontainer.Controls.Add(ucdays);
+                
+               
             }
         }
         private void btXoa_Click(object sender, EventArgs e)
@@ -129,6 +247,8 @@ namespace QuanLyChiTieu
                 FrmMain.toLich.Remove(item);
             }
         }
+
+        
 
         private void btClose_Click(object sender, EventArgs e)
         {

@@ -31,6 +31,7 @@ namespace QuanLyChiTieu
         {
             this.lbdays = new System.Windows.Forms.Label();
             this.lbMoneys = new System.Windows.Forms.Label();
+            this.lbEvent = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lbdays
@@ -52,16 +53,24 @@ namespace QuanLyChiTieu
             this.lbMoneys.TabIndex = 1;
             this.lbMoneys.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // lbEvent
+            // 
+            this.lbEvent.AutoSize = true;
+            this.lbEvent.Location = new System.Drawing.Point(42, 41);
+            this.lbEvent.Name = "lbEvent";
+            this.lbEvent.Size = new System.Drawing.Size(0, 17);
+            this.lbEvent.TabIndex = 2;
+            // 
             // UserControlDays
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.Controls.Add(this.lbEvent);
             this.Controls.Add(this.lbMoneys);
             this.Controls.Add(this.lbdays);
             this.Name = "UserControlDays";
             this.Size = new System.Drawing.Size(131, 73);
-            
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -71,5 +80,6 @@ namespace QuanLyChiTieu
 
         private System.Windows.Forms.Label lbdays;
         private System.Windows.Forms.Label lbMoneys;
+        private System.Windows.Forms.Label lbEvent;
     }
 }

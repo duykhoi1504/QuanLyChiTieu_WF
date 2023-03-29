@@ -18,9 +18,19 @@ namespace QuanLyChiTieu
         }
 
         
-        public void days( int numday)
+        public void days(int num)
         {
-            lbdays.Text = numday + "";
+            lbdays.Text = num.ToString();
         }
+        public void txteve(string eve)
+        {
+            
+            if (eve.Equals("0"))
+                lbEvent.Text = "" ;
+            else
+                lbEvent.Text = eve;
+
+        }
+
     }
 }
