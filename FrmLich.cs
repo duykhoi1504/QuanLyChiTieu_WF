@@ -30,7 +30,7 @@ namespace QuanLyChiTieu
             lbThu.Text = FrmMain.tongThu.ToString();
             lbChi.Text = FrmMain.tongChi.ToString();
             lbTong.Text = (FrmMain.tongThu+FrmMain.tongChi).ToString();
-
+            
             foreach (ListViewItem item in FrmMain.toLich)
                 listThuChi.Items.Add(item);
             displayDays();
@@ -245,15 +245,31 @@ namespace QuanLyChiTieu
                 DateTime itemDate = DateTime.Parse(dateStr);
                 if (day != itemDate.Day || month != itemDate.Month || year != itemDate.Year)
                     listThuChi.Items.Remove(item);
-            }
-        }
 
+            }
+            FrmMain.tongChi = 0;
+            FrmMain.tongThu = 0;
+            foreach (ListViewItem item in listThuChi.Items)
+            {
+                double soTienInList = double.Parse(item.SubItems[1].Text);
+                
+                if (soTienInList < 0)
+                    FrmMain.tongChi += double.Parse(item.SubItems[1].Text);
+                else
+                    FrmMain.tongThu += double.Parse(item.SubItems[1].Text);
+            }
+            lbThu.Text = FrmMain.tongThu.ToString();
+            lbChi.Text = FrmMain.tongChi.ToString();
+            lbTong.Text = (FrmMain.tongThu + FrmMain.tongChi).ToString();
+        }
+        
         private void btMacdinh_Click(object sender, EventArgs e)
         {
             defaultListView();
         }
         public void defaultListView()
         {
+
             listThuChi.Items.Clear();
             foreach (ListViewItem item in FrmMain.toLich)
                 listThuChi.Items.Add(item);
