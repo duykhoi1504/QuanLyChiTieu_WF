@@ -56,6 +56,64 @@ namespace QuanLyChiTieu
             lbThu.Text = FrmMain.tongThu.ToString();
         }
 
+        private void btHangnam_Click(object sender, EventArgs e)
+        {
+            defaultListView();
+            day = today.Day;
+            month = today.Month;
+            year = today.Year;
+            foreach (ListViewItem item in listThuChi.Items)
+            {
+
+                string dateStr = item.SubItems[2].Text;
+                double soTienInList = double.Parse(item.SubItems[1].Text);
+                DateTime itemDate = DateTime.Parse(dateStr);
+                if (year == itemDate.Year)
+                {
+
+                    if (soTienInList < 0)
+                        tongChiThang += double.Parse(item.SubItems[1].Text);
+                    else
+                        tongThuThang += double.Parse(item.SubItems[1].Text);
+
+                }
+            }
+            lbChi.Text = tongChiThang.ToString();
+            lbThu.Text = tongThuThang.ToString();
+            lbTong.Text = (tongChiThang + tongThuThang).ToString();
+            tongthuchitemp = 0;
+            tongThuThang = 0;
+            tongChiThang = 0;
+        }
+
+        private void btChi_Click(object sender, EventArgs e)
+        {
+            defaultListView();
+            foreach (ListViewItem item in listThuChi.Items)
+            {   
+                double soTienInList = double.Parse(item.SubItems[1].Text);
+                if (soTienInList > 0)
+                    listThuChi.Items.Remove(item);
+            }
+        }
+        private void btThu_Click(object sender, EventArgs e)
+        {
+            defaultListView();
+            foreach (ListViewItem item in listThuChi.Items)
+            {
+                double soTienInList = double.Parse(item.SubItems[1].Text);
+                if (soTienInList < 0)
+                    listThuChi.Items.Remove(item);
+            }
+        }
+        private void btDefault_Click(object sender, EventArgs e)
+        {
+            defaultListView();
+
+        }
+
+        
+
         private void btHangthang_Click(object sender, EventArgs e)
         {
             defaultListView();

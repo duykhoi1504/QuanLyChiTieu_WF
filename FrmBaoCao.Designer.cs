@@ -29,9 +29,9 @@ namespace QuanLyChiTieu
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbTong = new System.Windows.Forms.Label();
             this.lbChi = new System.Windows.Forms.Label();
@@ -165,6 +165,7 @@ namespace QuanLyChiTieu
             this.btHangnam.TabIndex = 15;
             this.btHangnam.Text = "Hằng năm";
             this.btHangnam.UseVisualStyleBackColor = false;
+            this.btHangnam.Click += new System.EventHandler(this.btHangnam_Click);
             // 
             // btHangthang
             // 
@@ -181,17 +182,17 @@ namespace QuanLyChiTieu
             // 
             // dataBaocaoview
             // 
-            chartArea1.Name = "ChartArea1";
-            this.dataBaocaoview.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.dataBaocaoview.Legends.Add(legend1);
+            chartArea5.Name = "ChartArea1";
+            this.dataBaocaoview.ChartAreas.Add(chartArea5);
+            legend5.Name = "Legend1";
+            this.dataBaocaoview.Legends.Add(legend5);
             this.dataBaocaoview.Location = new System.Drawing.Point(328, 10);
             this.dataBaocaoview.Name = "dataBaocaoview";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.dataBaocaoview.Series.Add(series1);
+            series5.ChartArea = "ChartArea1";
+            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series5.Legend = "Legend1";
+            series5.Name = "Series1";
+            this.dataBaocaoview.Series.Add(series5);
             this.dataBaocaoview.Size = new System.Drawing.Size(313, 178);
             this.dataBaocaoview.TabIndex = 21;
             this.dataBaocaoview.Text = "chart1";
@@ -243,6 +244,7 @@ namespace QuanLyChiTieu
             this.btChi.TabIndex = 16;
             this.btChi.Text = "Chi tiêu";
             this.btChi.UseVisualStyleBackColor = false;
+            this.btChi.Click += new System.EventHandler(this.btChi_Click);
             // 
             // btThu
             // 
@@ -255,6 +257,7 @@ namespace QuanLyChiTieu
             this.btThu.TabIndex = 15;
             this.btThu.Text = "thu nhập";
             this.btThu.UseVisualStyleBackColor = false;
+            this.btThu.Click += new System.EventHandler(this.btThu_Click);
             // 
             // containerThuchi
             // 
@@ -300,6 +303,7 @@ namespace QuanLyChiTieu
             this.btDefault.TabIndex = 16;
             this.btDefault.Text = "Default";
             this.btDefault.UseVisualStyleBackColor = false;
+            this.btDefault.Click += new System.EventHandler(this.btDefault_Click);
             // 
             // FrmBaoCao
             // 
