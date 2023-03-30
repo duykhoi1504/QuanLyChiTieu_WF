@@ -16,16 +16,17 @@ namespace QuanLyChiTieu
         {
             InitializeComponent();
         }
-
         private void btDangNhap_Click(object sender, EventArgs e)
         {
             nDangNhap();
         }
+
+
         int dem = 0; // bien dem so lan nhap sai
         const int MAX_dem = 3; // toi da so lan nhap sai 
         private void nDangNhap()
         {
-            if (txtTaiKhoan.Text != "" || txtMatKhau.Text != "")
+            if (txtTaiKhoan.Text != "Nam" || txtMatKhau.Text != "nam")
             {
                 dem++;
 
@@ -49,14 +50,14 @@ namespace QuanLyChiTieu
             {
                 FrmMain.DangNhap = txtTaiKhoan.Text;
                 this.Close(); //nhap dung thi dong form Login sang form Main
+                // FrmMain so1 = new FrmMain();
+                //this.Visible = false;
+                //so1.ShowDialog();
 
             }
         }
+       
 
-        private void btExit_Click(object sender, EventArgs e)
-        {
-            nThoat();
-        }
         private void nThoat()
         {
             if (MessageBox.Show("Do you want to exit form? ", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
@@ -64,6 +65,7 @@ namespace QuanLyChiTieu
                 Application.Exit(); // Thoát chương trình nếu người dùng chọn "Yes"
             }
         }
+
         protected override bool ProcessDialogKey(Keys keyData) // use bàn phím
         {
             switch (keyData)
@@ -73,20 +75,27 @@ namespace QuanLyChiTieu
             }
             return false;
         }
+
+      
+
+     
+
         private void txtTaiKhoan_Validating(object sender, CancelEventArgs e)
         {
+           
 
-            if (string.IsNullOrWhiteSpace(txtTaiKhoan.Text))
-            {
-                errorProvider1.SetError(txtTaiKhoan, "Vui lòng nhập tên tài khoản");
-                //e.Cancel = true;
+                if (string.IsNullOrWhiteSpace(txtTaiKhoan.Text))
+                {
+                    errorProvider1.SetError(txtTaiKhoan, "Vui lòng nhập tên tài khoản");
+                    //e.Cancel = true;
 
-            }
-            else
-            {
-                errorProvider1.Clear();
-            }
-        }
+                }
+                else
+                {
+                    errorProvider1.Clear();
+                }
+          }
+
         private void txtMatKhau_Validating(object sender, CancelEventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txtMatKhau.Text))
@@ -101,9 +110,48 @@ namespace QuanLyChiTieu
             }
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
+        private void timer1_Tick_1(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void txtTaiKhoan_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Tab)
+            {
+                e.SuppressKeyPress = true;
+                txtMatKhau.Focus();
+            }
+        }
+
+        private void picHide_Click(object sender, EventArgs e)
+        {
+
+            if (txtMatKhau.PasswordChar == '*')
+            {
+                picShow.BringToFront();
+                txtMatKhau.PasswordChar = '\0';
+            }
+        }
+
+        private void picShow_Click(object sender, EventArgs e)
+        {
+
+            if (txtMatKhau.PasswordChar == '\0')
+            {
+                picHide.BringToFront();
+                txtMatKhau.PasswordChar = '*';
+            }
+        }
+
+        private void btExit_Click(object sender, EventArgs e)
+        {
+            nThoat();
+        }
+
+        private void btDangNhap_Click_1(object sender, EventArgs e)
+        {
+            nDangNhap();
         }
     }
 }
