@@ -186,11 +186,14 @@ namespace QuanLyChiTieu
         }
         private void dtDate_ValueChanged(object sender, EventArgs e)
         {
-           
+            defaultListView();
             daycontainer.Controls.Clear();
-            tongthuchitemp = 0;
+            //tongthuchitemp = 0;
             month = dtDate.Value.Month; ;
             year = dtDate.Value.Year;
+            day = dtDate.Value.Day;
+            //
+            
             //
             string monthname = DateTimeFormatInfo.CurrentInfo.GetMonthName(month);
 
@@ -230,22 +233,52 @@ namespace QuanLyChiTieu
                     if (i == itemDate.Day && month == itemDate.Month && year == itemDate.Year)
                     {
                         tongthuchitemp += tongthuchiInList;
-
                     }
                 }
                 ucdays.txteve(tongthuchitemp.ToString());
+                tongthuchitemp = 0;
                 daycontainer.Controls.Add(ucdays);
-                
-               
+            }
+            foreach (ListViewItem item in listThuChi.Items)
+            {
+                string dateStr = item.SubItems[2].Text;
+                DateTime itemDate = DateTime.Parse(dateStr);
+                if (day != itemDate.Day || month != itemDate.Month || year != itemDate.Year)
+                    listThuChi.Items.Remove(item);
             }
         }
+
+        private void btMacdinh_Click(object sender, EventArgs e)
+        {
+            defaultListView();
+        }
+        public void defaultListView()
+        {
+            listThuChi.Items.Clear();
+            foreach (ListViewItem item in FrmMain.toLich)
+                listThuChi.Items.Add(item);
+        }
+
         private void btXoa_Click(object sender, EventArgs e)
         {
             foreach (ListViewItem item in listThuChi.SelectedItems)
             {
+                //kiem tra so tien hien tai de update len total box
+                double soTienInList = double.Parse(item.SubItems[1].Text);
+                if (soTienInList < 0)
+                    FrmMain.tongChi -= double.Parse(item.SubItems[1].Text);
+                else
+                    FrmMain.tongThu -= double.Parse(item.SubItems[1].Text);
+
+                ///xoa item đã chọn
                 listThuChi.Items.Remove(item);
+                ///update list vào frmMain
                 FrmMain.toLich.Remove(item);
             }
+            lbTong.Text = (FrmMain.tongChi + FrmMain.tongThu).ToString();
+            lbChi.Text = FrmMain.tongChi.ToString();
+            lbThu.Text = FrmMain.tongThu.ToString();
+
         }
 
         

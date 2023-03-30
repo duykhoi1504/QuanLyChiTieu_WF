@@ -58,6 +58,7 @@ namespace QuanLyChiTieu
             this.dtDate = new System.Windows.Forms.DateTimePicker();
             this.btXoa = new System.Windows.Forms.Button();
             this.btClose = new System.Windows.Forms.Button();
+            this.btMacdinh = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listThuChi
@@ -260,7 +261,7 @@ namespace QuanLyChiTieu
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(0, 559);
+            this.label8.Location = new System.Drawing.Point(150, 559);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(73, 17);
             this.label8.TabIndex = 27;
@@ -271,7 +272,7 @@ namespace QuanLyChiTieu
             this.lbThu.AutoSize = true;
             this.lbThu.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbThu.ForeColor = System.Drawing.Color.Blue;
-            this.lbThu.Location = new System.Drawing.Point(67, 559);
+            this.lbThu.Location = new System.Drawing.Point(217, 559);
             this.lbThu.Name = "lbThu";
             this.lbThu.Size = new System.Drawing.Size(26, 17);
             this.lbThu.TabIndex = 27;
@@ -280,7 +281,7 @@ namespace QuanLyChiTieu
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(153, 559);
+            this.label10.Location = new System.Drawing.Point(3, 559);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(59, 17);
             this.label10.TabIndex = 27;
@@ -291,7 +292,7 @@ namespace QuanLyChiTieu
             this.lbChi.AutoSize = true;
             this.lbChi.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbChi.ForeColor = System.Drawing.Color.Red;
-            this.lbChi.Location = new System.Drawing.Point(206, 559);
+            this.lbChi.Location = new System.Drawing.Point(56, 559);
             this.lbChi.Name = "lbChi";
             this.lbChi.Size = new System.Drawing.Size(26, 17);
             this.lbChi.TabIndex = 27;
@@ -319,7 +320,7 @@ namespace QuanLyChiTieu
             // 
             // dtDate
             // 
-            this.dtDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtDate.Location = new System.Drawing.Point(525, 555);
             this.dtDate.Name = "dtDate";
             this.dtDate.Size = new System.Drawing.Size(208, 22);
@@ -350,12 +351,25 @@ namespace QuanLyChiTieu
             this.btClose.UseVisualStyleBackColor = false;
             this.btClose.Click += new System.EventHandler(this.btClose_Click);
             // 
+            // btMacdinh
+            // 
+            this.btMacdinh.BackColor = System.Drawing.Color.White;
+            this.btMacdinh.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btMacdinh.Location = new System.Drawing.Point(858, 637);
+            this.btMacdinh.Name = "btMacdinh";
+            this.btMacdinh.Size = new System.Drawing.Size(96, 30);
+            this.btMacdinh.TabIndex = 29;
+            this.btMacdinh.Text = "Default";
+            this.btMacdinh.UseVisualStyleBackColor = false;
+            this.btMacdinh.Click += new System.EventHandler(this.btMacdinh_Click);
+            // 
             // FrmLich
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(970, 758);
+            this.Controls.Add(this.btMacdinh);
             this.Controls.Add(this.dtDate);
             this.Controls.Add(this.btClose);
             this.Controls.Add(this.btXoa);
@@ -413,5 +427,6 @@ namespace QuanLyChiTieu
         private System.Windows.Forms.Button btClose;
         private System.Windows.Forms.ImageList imageListLarge;
         private System.Windows.Forms.ImageList imageListSmall;
+        private System.Windows.Forms.Button btMacdinh;
     }
 }

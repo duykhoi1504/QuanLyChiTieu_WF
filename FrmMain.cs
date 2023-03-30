@@ -23,17 +23,16 @@ namespace QuanLyChiTieu
         //public static double tongThuChi=0;
         ////
         public static double tienThuchi = 0;
-
-
-
-
-
         public FrmMain()
         {
             toLich = new List<ListViewItem>();
             FrmLogin f = new FrmLogin();
             f.ShowDialog();
             InitializeComponent();
+        }
+        public void tinhTongTienInList()
+        {
+            
         }
         private Form currenFormChild;
 

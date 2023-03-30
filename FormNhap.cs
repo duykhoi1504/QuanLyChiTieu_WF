@@ -105,11 +105,26 @@ namespace QuanLyChiTieu
         }
         private void btXoa_Click(object sender, EventArgs e)
         {
+           
             foreach (ListViewItem item in listThuchi.SelectedItems)
             {
+                //kiem tra so tien hien tai de update len total box
+                double soTienInList = double.Parse(item.SubItems[1].Text);
+                if(soTienInList<0)
+                    FrmMain.tongChi -= double.Parse(item.SubItems[1].Text);
+                else
+                    FrmMain.tongThu -= double.Parse(item.SubItems[1].Text);
+                
+                ///xoa item đã chọn
                 listThuchi.Items.Remove(item);
+                ///update list vào frmMain
                 FrmMain.toLich.Remove(item);
             }
+         
+            lbThuchi.Text = (FrmMain.tongChi+ FrmMain.tongThu).ToString();
+            lbChitieu.Text = FrmMain.tongChi.ToString();
+            lbThunhap.Text = FrmMain.tongThu.ToString();
+            
         }
         private void btClose_Click(object sender, EventArgs e)
         {
