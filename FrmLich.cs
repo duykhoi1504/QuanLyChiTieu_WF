@@ -296,9 +296,6 @@ namespace QuanLyChiTieu
             lbThu.Text = FrmMain.tongThu.ToString();
 
         }
-
-        
-
         private void btClose_Click(object sender, EventArgs e)
         {
             Application.Exit();

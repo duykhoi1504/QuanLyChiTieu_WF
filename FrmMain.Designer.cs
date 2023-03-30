@@ -151,6 +151,7 @@ namespace QuanLyChiTieu
             this.Name = "FrmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quan Ly Chi Tieu";
+      
             ((System.ComponentModel.ISupportInitialize)(this.HomePicture)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.pnBody.ResumeLayout(false);
