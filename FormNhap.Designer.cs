@@ -355,6 +355,7 @@ namespace QuanLyChiTieu
             // txtAccept
             // 
             this.txtAccept.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtAccept.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.txtAccept.Location = new System.Drawing.Point(3, 370);
             this.txtAccept.Name = "txtAccept";
             this.txtAccept.Size = new System.Drawing.Size(604, 39);
@@ -368,6 +369,7 @@ namespace QuanLyChiTieu
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(633, 595);
             this.Controls.Add(this.containerDanhmuc);

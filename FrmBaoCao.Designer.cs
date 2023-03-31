@@ -32,6 +32,7 @@ namespace QuanLyChiTieu
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmBaoCao));
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbTong = new System.Windows.Forms.Label();
             this.lbChi = new System.Windows.Forms.Label();
@@ -160,6 +161,7 @@ namespace QuanLyChiTieu
             // 
             // dataBaocaoview
             // 
+            this.dataBaocaoview.BackColor = System.Drawing.Color.Transparent;
             chartArea1.Name = "ChartArea1";
             this.dataBaocaoview.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
@@ -247,6 +249,7 @@ namespace QuanLyChiTieu
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.btXoa);
             this.panel2.Controls.Add(this.btDefault);
             this.panel2.Controls.Add(this.btChi);
@@ -288,6 +291,7 @@ namespace QuanLyChiTieu
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(647, 581);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.dataBaocaoview);
