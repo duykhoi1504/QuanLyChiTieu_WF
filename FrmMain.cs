@@ -87,7 +87,6 @@ namespace QuanLyChiTieu
             btLich.BackColor = Color.White;
             btNhap.BackColor = Color.White;
             OpenCHildForm(new FrmBaoCao());
-
             pnBody.Size = new Size(665, 628);
             this.Size = new Size(650, 545);
             this.StartPosition = FormStartPosition.CenterScreen;
@@ -98,7 +97,12 @@ namespace QuanLyChiTieu
         private void HomePicture_Click(object sender, EventArgs e)
         {
            
-
+            btBaocao.BackColor = Color.White;
+            btLich.BackColor = Color.White;
+            btNhap.BackColor = Color.Orange;
+            pnBody.Size = new Size(633, 595);
+            this.Size = new Size(600, 545);
+            this.StartPosition = FormStartPosition.CenterScreen;
             if (currenFormChild != null)
             {
                 currenFormChild.Close();

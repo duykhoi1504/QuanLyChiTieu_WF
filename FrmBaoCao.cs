@@ -20,12 +20,14 @@ namespace QuanLyChiTieu
         {
             
             InitializeComponent();
+            chartBaocao.Titles.Add("Bảng báo cáo ");
+            
         }
 
         private void FrmBaoCao_Load(object sender, EventArgs e)
         {
             //
-          
+            
             //
             lbThu.Text = FrmMain.tongThu.ToString();
             lbChi.Text = FrmMain.tongChi.ToString();
@@ -33,8 +35,27 @@ namespace QuanLyChiTieu
 
             foreach (ListViewItem item in FrmMain.toLich)
                 listThuChi.Items.Add(item);
+            taoBang(FrmMain.tongChi, FrmMain.tongThu, FrmMain.tongChi + FrmMain.tongThu);
         }
+        ///bang
+        public void taoBang( double tongchi,double tongthu,double tong)
+        {
+            chartBaocao.Series["chitieu"].Points.AddXY("chi tiêu", tongchi);
+            chartBaocao.Series["chitieu"].Points.AddXY("thu nhâp", tongthu);
+            chartBaocao.Series["chitieu"].Points.AddXY("thu chi", tong);
+            chartBaocao.Series["chitieu"].Points[0].Color = Color.Red;
+            chartBaocao.Series["chitieu"].Points[1].Color = Color.Blue;
+            chartBaocao.Series["chitieu"].Points[2].Color = Color.Green;
 
+
+        }
+        public void xoaDulieutrongbang()
+        {
+            foreach (var series in chartBaocao.Series)
+            {
+                series.Points.Clear();
+            }
+        }
         private void btXoa_Click(object sender, EventArgs e)
         {
             foreach (ListViewItem item in listThuChi.SelectedItems)
@@ -54,10 +75,15 @@ namespace QuanLyChiTieu
             lbTong.Text = (FrmMain.tongChi + FrmMain.tongThu).ToString();
             lbChi.Text = FrmMain.tongChi.ToString();
             lbThu.Text = FrmMain.tongThu.ToString();
+
+            //them xao du lieu va them du lieu vao trong bang chart pie
+            xoaDulieutrongbang();
+            taoBang(FrmMain.tongChi, FrmMain.tongThu, FrmMain.tongChi + FrmMain.tongThu);
         }
 
         private void btHangnam_Click(object sender, EventArgs e)
         {
+
             defaultListView();
             day = today.Day;
             month = today.Month;
@@ -81,40 +107,14 @@ namespace QuanLyChiTieu
             lbChi.Text = tongChiThang.ToString();
             lbThu.Text = tongThuThang.ToString();
             lbTong.Text = (tongChiThang + tongThuThang).ToString();
+
+            //them xao du lieu va them du lieu vao trong bang chart pie
+            xoaDulieutrongbang();
+            taoBang(tongChiThang, tongThuThang, tongChiThang + tongThuThang);
+            
             tongthuchitemp = 0;
             tongThuThang = 0;
             tongChiThang = 0;
-        }
-
-        private void btChi_Click(object sender, EventArgs e)
-        {
-            defaultListView();
-            foreach (ListViewItem item in listThuChi.Items)
-            {   
-                double soTienInList = double.Parse(item.SubItems[1].Text);
-                if (soTienInList > 0)
-                    listThuChi.Items.Remove(item);
-            }
-        }
-        private void btThu_Click(object sender, EventArgs e)
-        {
-            defaultListView();
-            foreach (ListViewItem item in listThuChi.Items)
-            {
-                double soTienInList = double.Parse(item.SubItems[1].Text);
-                if (soTienInList < 0)
-                    listThuChi.Items.Remove(item);
-            }
-        }
-        private void btDefault_Click(object sender, EventArgs e)
-        {
-            defaultListView();
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void btHangthang_Click(object sender, EventArgs e)
@@ -142,18 +142,57 @@ namespace QuanLyChiTieu
             lbChi.Text = tongChiThang.ToString();
             lbThu.Text = tongThuThang.ToString();
             lbTong.Text = (tongChiThang+ tongThuThang).ToString();
+
+            //them xao du lieu va them du lieu vao trong bang chart pie
+            xoaDulieutrongbang();
+            taoBang(tongChiThang, tongThuThang, tongChiThang + tongThuThang);
+
             tongthuchitemp = 0;
             tongThuThang = 0;
             tongChiThang = 0;
         }
+        private void btChi_Click(object sender, EventArgs e)
+        {
+            defaultListView();
+            foreach (ListViewItem item in listThuChi.Items)
+            {   
+                double soTienInList = double.Parse(item.SubItems[1].Text);
+                if (soTienInList > 0)
+                    listThuChi.Items.Remove(item);
+            }
+        }
+        private void btThu_Click(object sender, EventArgs e)
+        {
+            defaultListView();
+            foreach (ListViewItem item in listThuChi.Items)
+            {
+                double soTienInList = double.Parse(item.SubItems[1].Text);
+                if (soTienInList < 0)
+                    listThuChi.Items.Remove(item);
+            }
+        }
+        private void btDefault_Click(object sender, EventArgs e)
+        {
+            defaultListView();
+
+        }
 
         public void defaultListView()
         {
-
+           
             listThuChi.Items.Clear();
             foreach (ListViewItem item in FrmMain.toLich)
                 listThuChi.Items.Add(item);
+
+            //them xao du lieu va them du lieu vao trong bang chart pie
+            xoaDulieutrongbang();
+            taoBang(FrmMain.tongChi, FrmMain.tongThu, FrmMain.tongChi + FrmMain.tongThu);
+
         }
+
+
+
+
         //private void dtDate_ValueChanged(object sender, EventArgs e)
         //{
         //    defaultListView();

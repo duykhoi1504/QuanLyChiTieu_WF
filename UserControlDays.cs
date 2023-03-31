@@ -24,11 +24,15 @@ namespace QuanLyChiTieu
         }
         public void txteve(string eve)
         {
-            
             if (eve.Equals("0"))
-                lbEvent.Text = "" ;
+                lbMoneys.Text = "";
             else
-                lbEvent.Text = eve;
+            {
+                if (int.Parse(eve) > 0)
+                    lbMoneys.Text = "+" + eve;
+                else
+                    lbMoneys.Text = eve;
+            }
 
         }
 

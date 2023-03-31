@@ -47,6 +47,8 @@ namespace QuanLyChiTieu
             // lbMoneys
             // 
             this.lbMoneys.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.lbMoneys.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbMoneys.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.lbMoneys.Location = new System.Drawing.Point(0, 41);
             this.lbMoneys.Name = "lbMoneys";
             this.lbMoneys.Size = new System.Drawing.Size(131, 32);
@@ -65,7 +67,7 @@ namespace QuanLyChiTieu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.Controls.Add(this.lbEvent);
             this.Controls.Add(this.lbMoneys);
             this.Controls.Add(this.lbdays);

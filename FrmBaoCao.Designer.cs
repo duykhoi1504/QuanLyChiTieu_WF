@@ -42,7 +42,7 @@ namespace QuanLyChiTieu
             this.label3 = new System.Windows.Forms.Label();
             this.btHangnam = new System.Windows.Forms.Button();
             this.btHangthang = new System.Windows.Forms.Button();
-            this.dataBaocaoview = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chartBaocao = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.listThuChi = new System.Windows.Forms.ListView();
             this.DanhMuc = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SoTien = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -55,7 +55,7 @@ namespace QuanLyChiTieu
             this.btXoa = new System.Windows.Forms.Button();
             this.btDefault = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataBaocaoview)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartBaocao)).BeginInit();
             this.containerThuchi.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -77,7 +77,7 @@ namespace QuanLyChiTieu
             // 
             this.lbTong.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTong.ForeColor = System.Drawing.Color.Black;
-            this.lbTong.Location = new System.Drawing.Point(87, 91);
+            this.lbTong.Location = new System.Drawing.Point(86, 90);
             this.lbTong.Name = "lbTong";
             this.lbTong.Size = new System.Drawing.Size(205, 32);
             this.lbTong.TabIndex = 2;
@@ -88,7 +88,7 @@ namespace QuanLyChiTieu
             // 
             this.lbChi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbChi.ForeColor = System.Drawing.Color.Red;
-            this.lbChi.Location = new System.Drawing.Point(92, 5);
+            this.lbChi.Location = new System.Drawing.Point(87, 13);
             this.lbChi.Name = "lbChi";
             this.lbChi.Size = new System.Drawing.Size(205, 23);
             this.lbChi.TabIndex = 2;
@@ -99,7 +99,7 @@ namespace QuanLyChiTieu
             // 
             this.lbThu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbThu.ForeColor = System.Drawing.Color.Blue;
-            this.lbThu.Location = new System.Drawing.Point(92, 47);
+            this.lbThu.Location = new System.Drawing.Point(87, 55);
             this.lbThu.Name = "lbThu";
             this.lbThu.Size = new System.Drawing.Size(205, 23);
             this.lbThu.TabIndex = 2;
@@ -159,23 +159,22 @@ namespace QuanLyChiTieu
             this.btHangthang.UseVisualStyleBackColor = false;
             this.btHangthang.Click += new System.EventHandler(this.btHangthang_Click);
             // 
-            // dataBaocaoview
+            // chartBaocao
             // 
-            this.dataBaocaoview.BackColor = System.Drawing.Color.Transparent;
+            this.chartBaocao.BackColor = System.Drawing.Color.Transparent;
             chartArea1.Name = "ChartArea1";
-            this.dataBaocaoview.ChartAreas.Add(chartArea1);
+            this.chartBaocao.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
-            this.dataBaocaoview.Legends.Add(legend1);
-            this.dataBaocaoview.Location = new System.Drawing.Point(328, 12);
-            this.dataBaocaoview.Name = "dataBaocaoview";
+            this.chartBaocao.Legends.Add(legend1);
+            this.chartBaocao.Location = new System.Drawing.Point(328, 12);
+            this.chartBaocao.Name = "chartBaocao";
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
             series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.dataBaocaoview.Series.Add(series1);
-            this.dataBaocaoview.Size = new System.Drawing.Size(313, 176);
-            this.dataBaocaoview.TabIndex = 21;
-            this.dataBaocaoview.Text = "chart1";
+            series1.Name = "chitieu";
+            this.chartBaocao.Series.Add(series1);
+            this.chartBaocao.Size = new System.Drawing.Size(313, 176);
+            this.chartBaocao.TabIndex = 21;
             // 
             // listThuChi
             // 
@@ -294,7 +293,7 @@ namespace QuanLyChiTieu
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(647, 581);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.dataBaocaoview);
+            this.Controls.Add(this.chartBaocao);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btHangnam);
             this.Controls.Add(this.btHangthang);
@@ -303,7 +302,7 @@ namespace QuanLyChiTieu
             this.Load += new System.EventHandler(this.FrmBaoCao_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataBaocaoview)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartBaocao)).EndInit();
             this.containerThuchi.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -320,7 +319,7 @@ namespace QuanLyChiTieu
         private System.Windows.Forms.Label lbThu;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataVisualization.Charting.Chart dataBaocaoview;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartBaocao;
         private System.Windows.Forms.ListView listThuChi;
         private System.Windows.Forms.ColumnHeader DanhMuc;
         private System.Windows.Forms.ColumnHeader SoTien;
