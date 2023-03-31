@@ -31,10 +31,14 @@ namespace QuanLyChiTieu
             lbChi.Text = FrmMain.tongChi.ToString();
             lbTong.Text = (FrmMain.tongThu+FrmMain.tongChi).ToString();
             
+
             foreach (ListViewItem item in FrmMain.toLich)
+            {
                 listThuChi.Items.Add(item);
+            }
+
             displayDays();
-           
+   
 
         }
         private void displayDays()
@@ -247,25 +251,43 @@ namespace QuanLyChiTieu
                     listThuChi.Items.Remove(item);
 
             }
-            FrmMain.tongChi = 0;
-            FrmMain.tongThu = 0;
+            
+            //cap nhat cac lb thu chi tong
+            double tempTongChi = 0;
+            double tempTongThu = 0;
             foreach (ListViewItem item in listThuChi.Items)
             {
                 double soTienInList = double.Parse(item.SubItems[1].Text);
                 
                 if (soTienInList < 0)
-                    FrmMain.tongChi += double.Parse(item.SubItems[1].Text);
+                    tempTongChi += double.Parse(item.SubItems[1].Text);
                 else
-                    FrmMain.tongThu += double.Parse(item.SubItems[1].Text);
+                    tempTongThu += double.Parse(item.SubItems[1].Text);
             }
-            lbThu.Text = FrmMain.tongThu.ToString();
-            lbChi.Text = FrmMain.tongChi.ToString();
-            lbTong.Text = (FrmMain.tongThu + FrmMain.tongChi).ToString();
+            lbThu.Text = tempTongChi.ToString();
+            lbChi.Text = tempTongThu.ToString();
+            lbTong.Text = (tempTongChi + tempTongThu).ToString();
         }
         
         private void btMacdinh_Click(object sender, EventArgs e)
         {
+            double tempTongChi = 0;
+            double tempTongThu = 0;
+            foreach (ListViewItem item in listThuChi.Items)
+            {
+                double soTienInList = double.Parse(item.SubItems[1].Text);
+
+                if (soTienInList < 0)
+                    tempTongChi += double.Parse(item.SubItems[1].Text);
+                else
+                    tempTongThu += double.Parse(item.SubItems[1].Text);
+            }
+            lbThu.Text = tempTongChi.ToString();
+            lbChi.Text = tempTongThu.ToString();
+            lbTong.Text = (tempTongChi + tempTongThu).ToString();
+
             defaultListView();
+
         }
         public void defaultListView()
         {

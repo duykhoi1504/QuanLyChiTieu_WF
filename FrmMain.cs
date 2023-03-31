@@ -14,10 +14,12 @@ namespace QuanLyChiTieu
     public partial class FrmMain : Form
     {
         public static string DangNhap = "";
-        public static int rdChoose = 0;
+        public static int rdChoose = 99999;
         public static string tenDM;
         public static bool isThu = true;
         public static List<ListViewItem> toLich;
+
+
         public static double tongChi = 0;
         public static double tongThu = 0;
         //public static double tongThuChi=0;
@@ -26,7 +28,7 @@ namespace QuanLyChiTieu
         public FrmMain()
         {
             toLich = new List<ListViewItem>();
-            FrmLogin f = new FrmLogin();
+           FrmLogin f = new FrmLogin();
             f.ShowDialog();
             InitializeComponent();
         }
@@ -104,6 +106,6 @@ namespace QuanLyChiTieu
         
         }
 
-       
+        
     }
 }

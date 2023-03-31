@@ -31,13 +31,8 @@ namespace QuanLyChiTieu
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLich));
-            this.listThuChi = new System.Windows.Forms.ListView();
-            this.DanhMuc = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.SoTien = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.DateThuChi = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.GhiChu = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.imageListLarge = new System.Windows.Forms.ImageList(this.components);
-            this.imageListSmall = new System.Windows.Forms.ImageList(this.components);
+            this.listLarge = new System.Windows.Forms.ImageList(this.components);
+            this.listSmall = new System.Windows.Forms.ImageList(this.components);
             this.daycontainer = new System.Windows.Forms.FlowLayoutPanel();
             this.btprevious = new System.Windows.Forms.Button();
             this.btnext = new System.Windows.Forms.Button();
@@ -59,83 +54,50 @@ namespace QuanLyChiTieu
             this.btXoa = new System.Windows.Forms.Button();
             this.btClose = new System.Windows.Forms.Button();
             this.btMacdinh = new System.Windows.Forms.Button();
+            this.DanhMuc = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.SoTien = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.DateThuChi = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.GhiChu = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.listThuChi = new System.Windows.Forms.ListView();
             this.SuspendLayout();
             // 
-            // listThuChi
+            // listLarge
             // 
-            this.listThuChi.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.DanhMuc,
-            this.SoTien,
-            this.DateThuChi,
-            this.GhiChu});
-            this.listThuChi.FullRowSelect = true;
-            this.listThuChi.HideSelection = false;
-            this.listThuChi.LargeImageList = this.imageListLarge;
-            this.listThuChi.Location = new System.Drawing.Point(6, 583);
-            this.listThuChi.Name = "listThuChi";
-            this.listThuChi.Size = new System.Drawing.Size(843, 158);
-            this.listThuChi.StateImageList = this.imageListSmall;
-            this.listThuChi.TabIndex = 19;
-            this.listThuChi.UseCompatibleStateImageBehavior = false;
-            this.listThuChi.View = System.Windows.Forms.View.Details;
+            this.listLarge.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("listLarge.ImageStream")));
+            this.listLarge.TransparentColor = System.Drawing.Color.Transparent;
+            this.listLarge.Images.SetKeyName(0, "z4208554600082_48f3c7e22c59ad7664a7ab5171727da7 (1).png");
+            this.listLarge.Images.SetKeyName(1, "z4208554795397_0cac8539709f1bb37ec066a179edc0a5.jpg");
+            this.listLarge.Images.SetKeyName(2, "phone-call.png");
+            this.listLarge.Images.SetKeyName(3, "z4208554639929_cf6670320635a16aafe14cec5acf853c.jpg");
+            this.listLarge.Images.SetKeyName(4, "z4208554675922_9050253764c06bda622198944092b770.png");
+            this.listLarge.Images.SetKeyName(5, "z4208554687117_a809c1700bd58e78ac7d99e17dc845a8.png");
+            this.listLarge.Images.SetKeyName(6, "z4208554592380_1b8f9ecd715375255e07390dbc3f23f9.png");
+            this.listLarge.Images.SetKeyName(7, "z4208554687068_b5219bac464394579f2fb5764e8d1666.png");
+            this.listLarge.Images.SetKeyName(8, "z4208554813353_5f95f300b0d146e8028a6cc6a8b9dc3b.png");
+            this.listLarge.Images.SetKeyName(9, "tienluong.png");
+            this.listLarge.Images.SetKeyName(10, "tienphucap.png");
+            this.listLarge.Images.SetKeyName(11, "tienthuong.png");
+            this.listLarge.Images.SetKeyName(12, "dautu.png");
+            this.listLarge.Images.SetKeyName(13, "thunhapphu.png");
             // 
-            // DanhMuc
+            // listSmall
             // 
-            this.DanhMuc.Text = "Danh mục";
-            this.DanhMuc.Width = 160;
-            // 
-            // SoTien
-            // 
-            this.SoTien.Text = "Số tiền";
-            this.SoTien.Width = 120;
-            // 
-            // DateThuChi
-            // 
-            this.DateThuChi.Text = "Date";
-            this.DateThuChi.Width = 120;
-            // 
-            // GhiChu
-            // 
-            this.GhiChu.Text = "Ghi chú";
-            this.GhiChu.Width = 400;
-            // 
-            // imageListLarge
-            // 
-            this.imageListLarge.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListLarge.ImageStream")));
-            this.imageListLarge.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageListLarge.Images.SetKeyName(0, "z4208554600082_48f3c7e22c59ad7664a7ab5171727da7 (1).png");
-            this.imageListLarge.Images.SetKeyName(1, "z4208554795397_0cac8539709f1bb37ec066a179edc0a5.jpg");
-            this.imageListLarge.Images.SetKeyName(2, "phone-call.png");
-            this.imageListLarge.Images.SetKeyName(3, "z4208554639929_cf6670320635a16aafe14cec5acf853c.jpg");
-            this.imageListLarge.Images.SetKeyName(4, "z4208554675922_9050253764c06bda622198944092b770.png");
-            this.imageListLarge.Images.SetKeyName(5, "z4208554687117_a809c1700bd58e78ac7d99e17dc845a8.png");
-            this.imageListLarge.Images.SetKeyName(6, "z4208554592380_1b8f9ecd715375255e07390dbc3f23f9.png");
-            this.imageListLarge.Images.SetKeyName(7, "z4208554687068_b5219bac464394579f2fb5764e8d1666.png");
-            this.imageListLarge.Images.SetKeyName(8, "z4208554813353_5f95f300b0d146e8028a6cc6a8b9dc3b.png");
-            this.imageListLarge.Images.SetKeyName(9, "tienluong.png");
-            this.imageListLarge.Images.SetKeyName(10, "tienphucap.png");
-            this.imageListLarge.Images.SetKeyName(11, "tienthuong.png");
-            this.imageListLarge.Images.SetKeyName(12, "dautu.png");
-            this.imageListLarge.Images.SetKeyName(13, "thunhapphu.png");
-            // 
-            // imageListSmall
-            // 
-            this.imageListSmall.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListSmall.ImageStream")));
-            this.imageListSmall.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageListSmall.Images.SetKeyName(0, "z4208554600082_48f3c7e22c59ad7664a7ab5171727da7 (1).png");
-            this.imageListSmall.Images.SetKeyName(1, "z4208554795397_0cac8539709f1bb37ec066a179edc0a5.jpg");
-            this.imageListSmall.Images.SetKeyName(2, "phone-call.png");
-            this.imageListSmall.Images.SetKeyName(3, "z4208554639929_cf6670320635a16aafe14cec5acf853c.jpg");
-            this.imageListSmall.Images.SetKeyName(4, "z4208554675922_9050253764c06bda622198944092b770.png");
-            this.imageListSmall.Images.SetKeyName(5, "z4208554687117_a809c1700bd58e78ac7d99e17dc845a8.png");
-            this.imageListSmall.Images.SetKeyName(6, "z4208554592380_1b8f9ecd715375255e07390dbc3f23f9.png");
-            this.imageListSmall.Images.SetKeyName(7, "z4208554687068_b5219bac464394579f2fb5764e8d1666.png");
-            this.imageListSmall.Images.SetKeyName(8, "z4208554813353_5f95f300b0d146e8028a6cc6a8b9dc3b.png");
-            this.imageListSmall.Images.SetKeyName(9, "tienluong.png");
-            this.imageListSmall.Images.SetKeyName(10, "tienphucap.png");
-            this.imageListSmall.Images.SetKeyName(11, "tienthuong.png");
-            this.imageListSmall.Images.SetKeyName(12, "dautu.png");
-            this.imageListSmall.Images.SetKeyName(13, "thunhapphu.png");
+            this.listSmall.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("listSmall.ImageStream")));
+            this.listSmall.TransparentColor = System.Drawing.Color.Transparent;
+            this.listSmall.Images.SetKeyName(0, "z4208554600082_48f3c7e22c59ad7664a7ab5171727da7 (1).png");
+            this.listSmall.Images.SetKeyName(1, "z4208554795397_0cac8539709f1bb37ec066a179edc0a5.jpg");
+            this.listSmall.Images.SetKeyName(2, "phone-call.png");
+            this.listSmall.Images.SetKeyName(3, "z4208554639929_cf6670320635a16aafe14cec5acf853c.jpg");
+            this.listSmall.Images.SetKeyName(4, "z4208554675922_9050253764c06bda622198944092b770.png");
+            this.listSmall.Images.SetKeyName(5, "z4208554687117_a809c1700bd58e78ac7d99e17dc845a8.png");
+            this.listSmall.Images.SetKeyName(6, "z4208554592380_1b8f9ecd715375255e07390dbc3f23f9.png");
+            this.listSmall.Images.SetKeyName(7, "z4208554687068_b5219bac464394579f2fb5764e8d1666.png");
+            this.listSmall.Images.SetKeyName(8, "z4208554813353_5f95f300b0d146e8028a6cc6a8b9dc3b.png");
+            this.listSmall.Images.SetKeyName(9, "tienluong.png");
+            this.listSmall.Images.SetKeyName(10, "tienphucap.png");
+            this.listSmall.Images.SetKeyName(11, "tienthuong.png");
+            this.listSmall.Images.SetKeyName(12, "dautu.png");
+            this.listSmall.Images.SetKeyName(13, "thunhapphu.png");
             // 
             // daycontainer
             // 
@@ -363,6 +325,44 @@ namespace QuanLyChiTieu
             this.btMacdinh.UseVisualStyleBackColor = false;
             this.btMacdinh.Click += new System.EventHandler(this.btMacdinh_Click);
             // 
+            // DanhMuc
+            // 
+            this.DanhMuc.Text = "Danh mục";
+            this.DanhMuc.Width = 160;
+            // 
+            // SoTien
+            // 
+            this.SoTien.Text = "Số tiền";
+            this.SoTien.Width = 120;
+            // 
+            // DateThuChi
+            // 
+            this.DateThuChi.Text = "Date";
+            this.DateThuChi.Width = 120;
+            // 
+            // GhiChu
+            // 
+            this.GhiChu.Text = "Ghi chú";
+            this.GhiChu.Width = 400;
+            // 
+            // listThuChi
+            // 
+            this.listThuChi.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.DanhMuc,
+            this.SoTien,
+            this.DateThuChi,
+            this.GhiChu});
+            this.listThuChi.FullRowSelect = true;
+            this.listThuChi.HideSelection = false;
+            this.listThuChi.LargeImageList = this.listLarge;
+            this.listThuChi.Location = new System.Drawing.Point(6, 583);
+            this.listThuChi.Name = "listThuChi";
+            this.listThuChi.Size = new System.Drawing.Size(843, 158);
+            this.listThuChi.StateImageList = this.listSmall;
+            this.listThuChi.TabIndex = 19;
+            this.listThuChi.UseCompatibleStateImageBehavior = false;
+            this.listThuChi.View = System.Windows.Forms.View.Details;
+            // 
             // FrmLich
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -400,10 +400,6 @@ namespace QuanLyChiTieu
         }
 
         #endregion
-        private System.Windows.Forms.ListView listThuChi;
-        private System.Windows.Forms.ColumnHeader DanhMuc;
-        private System.Windows.Forms.ColumnHeader SoTien;
-        private System.Windows.Forms.ColumnHeader GhiChu;
         private System.Windows.Forms.FlowLayoutPanel daycontainer;
         private System.Windows.Forms.Button btprevious;
         private System.Windows.Forms.Button btnext;
@@ -422,11 +418,15 @@ namespace QuanLyChiTieu
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label lbTong;
         private System.Windows.Forms.DateTimePicker dtDate;
-        private System.Windows.Forms.ColumnHeader DateThuChi;
         private System.Windows.Forms.Button btXoa;
         private System.Windows.Forms.Button btClose;
-        private System.Windows.Forms.ImageList imageListLarge;
-        private System.Windows.Forms.ImageList imageListSmall;
         private System.Windows.Forms.Button btMacdinh;
+        private System.Windows.Forms.ImageList listLarge;
+        private System.Windows.Forms.ImageList listSmall;
+        private System.Windows.Forms.ColumnHeader DanhMuc;
+        private System.Windows.Forms.ColumnHeader SoTien;
+        private System.Windows.Forms.ColumnHeader DateThuChi;
+        private System.Windows.Forms.ColumnHeader GhiChu;
+        private System.Windows.Forms.ListView listThuChi;
     }
 }

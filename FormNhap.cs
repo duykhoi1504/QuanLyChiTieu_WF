@@ -53,9 +53,14 @@ namespace QuanLyChiTieu
 
         private void txtAccept_Click(object sender, EventArgs e)
         {
-            
+
 
             if (txtSotien.Text == "") return;
+            if(FrmMain.rdChoose<0 || FrmMain.rdChoose > 13)
+            {
+                MessageBox.Show("Bạn chưa chọn loại danh mục", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             ListViewItem item = new ListViewItem(FrmMain.tenDM);
             
             if ( FrmMain.isThu== true)
@@ -75,25 +80,35 @@ namespace QuanLyChiTieu
             item.SubItems.Add(dtNgaythuchi.Value.ToString());
             item.SubItems.Add(txtGhichu.Text);
             item.ImageIndex = FrmMain.rdChoose;
+            
+
             listThuchi.Items.Add(item);
-            //RESET LAI TEXT BOX NHAP VA GHI CHU
-            txtSotien.Text = "";
-            txtGhichu.Text = "";
 
             //lien ket listview voi form lich
             FrmMain.toLich.Add(item);
-            
+            //reset rdChoose ve lai ban dau
+            FrmMain.rdChoose = 9999;
+            //re set lai user controlthu va chi khi nguoi dung nhan xac nhan
+            if (FrmMain.isThu == true)
+            {
+                containerDanhmuc.Controls.Clear();
+                UserControlThu ucThu = new UserControlThu();
+                containerDanhmuc.Controls.Add(ucThu);
+            }
+            else
+            {
+                containerDanhmuc.Controls.Clear();
+                UserControlChi ucChi = new UserControlChi();
+                containerDanhmuc.Controls.Add(ucChi);
+            }
+            //RESET LAI TEXT BOX NHAP VA GHI CHU
+            txtSotien.Text = "";
+            txtGhichu.Text = "";
+  
             //total
             lbChitieu.Text = FrmMain.tongChi.ToString();
             lbThunhap.Text = FrmMain.tongThu.ToString();
             lbThuchi.Text = (FrmMain.tongChi + FrmMain.tongThu).ToString();
-
-            //luuu du lieu bang constructor
-           
-            //SoChiTieu a = new SoChiTieu(FrmMain.tenDM, tienThuchi, dtNgaythuchi.Value.ToString(), txtGhichu.Text);
-            //QuanLySoChiTieu ql = new QuanLySoChiTieu(a);
-
-
         }
 
         private void txtSotien_KeyPress(object sender, KeyPressEventArgs e)
@@ -101,7 +116,9 @@ namespace QuanLyChiTieu
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
                 e.Handled = true;
+                MessageBox.Show("Vui lòng nhập số >_<", "Lưu ý!", MessageBoxButtons.OK, MessageBoxIcon.Stop);
             }
+
         }
         private void btXoa_Click(object sender, EventArgs e)
         {
@@ -131,6 +148,6 @@ namespace QuanLyChiTieu
             Application.Exit();
         }
 
-        
+      
     }
 }

@@ -29,9 +29,9 @@ namespace QuanLyChiTieu
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbTong = new System.Windows.Forms.Label();
             this.lbChi = new System.Windows.Forms.Label();
@@ -39,8 +39,6 @@ namespace QuanLyChiTieu
             this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.dtDate = new System.Windows.Forms.DateTimePicker();
             this.btHangnam = new System.Windows.Forms.Button();
             this.btHangthang = new System.Windows.Forms.Button();
             this.dataBaocaoview = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -69,8 +67,6 @@ namespace QuanLyChiTieu
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.dtDate);
             this.panel1.Location = new System.Drawing.Point(12, 48);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(310, 140);
@@ -80,7 +76,7 @@ namespace QuanLyChiTieu
             // 
             this.lbTong.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTong.ForeColor = System.Drawing.Color.Black;
-            this.lbTong.Location = new System.Drawing.Point(87, 95);
+            this.lbTong.Location = new System.Drawing.Point(87, 91);
             this.lbTong.Name = "lbTong";
             this.lbTong.Size = new System.Drawing.Size(205, 32);
             this.lbTong.TabIndex = 2;
@@ -91,7 +87,7 @@ namespace QuanLyChiTieu
             // 
             this.lbChi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbChi.ForeColor = System.Drawing.Color.Red;
-            this.lbChi.Location = new System.Drawing.Point(92, 41);
+            this.lbChi.Location = new System.Drawing.Point(92, 5);
             this.lbChi.Name = "lbChi";
             this.lbChi.Size = new System.Drawing.Size(205, 23);
             this.lbChi.TabIndex = 2;
@@ -102,7 +98,7 @@ namespace QuanLyChiTieu
             // 
             this.lbThu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbThu.ForeColor = System.Drawing.Color.Blue;
-            this.lbThu.Location = new System.Drawing.Point(92, 67);
+            this.lbThu.Location = new System.Drawing.Point(92, 47);
             this.lbThu.Name = "lbThu";
             this.lbThu.Size = new System.Drawing.Size(205, 23);
             this.lbThu.TabIndex = 2;
@@ -112,7 +108,7 @@ namespace QuanLyChiTieu
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(27, 101);
+            this.label6.Location = new System.Drawing.Point(27, 105);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(59, 17);
             this.label6.TabIndex = 0;
@@ -121,7 +117,7 @@ namespace QuanLyChiTieu
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 73);
+            this.label1.Location = new System.Drawing.Point(13, 61);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(73, 17);
             this.label1.TabIndex = 0;
@@ -130,29 +126,11 @@ namespace QuanLyChiTieu
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(27, 47);
+            this.label3.Location = new System.Drawing.Point(27, 19);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(59, 17);
             this.label3.TabIndex = 0;
             this.label3.Text = "Chi tiêu:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(44, 19);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(42, 17);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Date:";
-            // 
-            // dtDate
-            // 
-            this.dtDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtDate.Location = new System.Drawing.Point(92, 14);
-            this.dtDate.Name = "dtDate";
-            this.dtDate.Size = new System.Drawing.Size(200, 22);
-            this.dtDate.TabIndex = 1;
-            this.dtDate.ValueChanged += new System.EventHandler(this.dtDate_ValueChanged);
             // 
             // btHangnam
             // 
@@ -169,7 +147,7 @@ namespace QuanLyChiTieu
             // 
             // btHangthang
             // 
-            this.btHangthang.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.btHangthang.BackColor = System.Drawing.Color.WhiteSmoke;
             this.btHangthang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btHangthang.ForeColor = System.Drawing.SystemColors.WindowText;
             this.btHangthang.Location = new System.Drawing.Point(12, 11);
@@ -182,18 +160,18 @@ namespace QuanLyChiTieu
             // 
             // dataBaocaoview
             // 
-            chartArea5.Name = "ChartArea1";
-            this.dataBaocaoview.ChartAreas.Add(chartArea5);
-            legend5.Name = "Legend1";
-            this.dataBaocaoview.Legends.Add(legend5);
-            this.dataBaocaoview.Location = new System.Drawing.Point(328, 10);
+            chartArea1.Name = "ChartArea1";
+            this.dataBaocaoview.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.dataBaocaoview.Legends.Add(legend1);
+            this.dataBaocaoview.Location = new System.Drawing.Point(328, 12);
             this.dataBaocaoview.Name = "dataBaocaoview";
-            series5.ChartArea = "ChartArea1";
-            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series5.Legend = "Legend1";
-            series5.Name = "Series1";
-            this.dataBaocaoview.Series.Add(series5);
-            this.dataBaocaoview.Size = new System.Drawing.Size(313, 178);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.dataBaocaoview.Series.Add(series1);
+            this.dataBaocaoview.Size = new System.Drawing.Size(313, 176);
             this.dataBaocaoview.TabIndex = 21;
             this.dataBaocaoview.Text = "chart1";
             // 
@@ -331,8 +309,6 @@ namespace QuanLyChiTieu
         #endregion
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DateTimePicker dtDate;
         private System.Windows.Forms.Button btHangnam;
         private System.Windows.Forms.Button btHangthang;
         private System.Windows.Forms.Label lbTong;
