@@ -170,6 +170,7 @@ namespace QuanLyChiTieu
             this.chartBaocao.Name = "chartBaocao";
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series1.LabelForeColor = System.Drawing.Color.White;
             series1.Legend = "Legend1";
             series1.Name = "chitieu";
             this.chartBaocao.Series.Add(series1);

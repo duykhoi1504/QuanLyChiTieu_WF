@@ -26,15 +26,16 @@ namespace QuanLyChiTieu
         const int MAX_dem = 3; // toi da so lan nhap sai 
         private void nDangNhap()
         {
-            if (txtTaiKhoan.Text != "Nam" || txtMatKhau.Text != "nam")
+            if (txtTaiKhoan.Text != "abc" || txtMatKhau.Text != "1")
             {
                 dem++;
 
                 if (dem < MAX_dem)
                 {
                     MessageBox.Show("Sai tài khoản hoặc mật khẩu!\nBạn còn " + (MAX_dem - dem) + " lần thử", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    //txtTaiKhoan.ResetText();
-                    //txtMatKhau.ResetText();
+                    txtTaiKhoan.Text = "";
+                    txtTaiKhoan.Focus();
+                    txtMatKhau.Text = "";
                 }
 
                 else if (dem >= MAX_dem)

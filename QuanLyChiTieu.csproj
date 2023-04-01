@@ -77,10 +77,8 @@
     <Compile Include="FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="LuuEventLich.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="QuanLyLich.cs" />
     <Compile Include="SoChiTieu.cs" />
     <Compile Include="UserControlBlank.cs">
       <SubType>UserControl</SubType>
